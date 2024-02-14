@@ -122,28 +122,17 @@ const DashboardPage = () => {
               Name Generator <WholeWord className="h-4 w-4" />
             </Button>
           </Link>
-          <Link href={"/dashboard"}>
-            <Button variant={"ghost"} className="gap-3 border-0 cursor-wait">
-              More Comming Soon <Loader className="h-4 w-4" />
-            </Button>
-          </Link>
         </div>
       </div>
-      <div className="relative shadow-2xl shadow-zinc-950 rounded-3xl cursor-cell">
-        <AspectRatio ratio={32 / 9}>
+      <div className="relative shadow-2xl shadow-zinc-950 rounded-2xl cursor-cell">
+        <AspectRatio ratio={40 / 9}>
           <Image
             fill
             alt="image"
             src={"/coming-soon-bg.png"}
-            className="rounded-3xl"
+            className="rounded-2xl"
           />
         </AspectRatio>
-        <div className="absolute bottom-0 left-0 p-4 backdrop-blur bg-zinc-950/80 w-full h-full flex flex-col gap-4 justify-center items-center rounded-2xl">
-          <div className="text-rose-300 font-extrabold text-3xl max-md:text-sm text-center">
-            Upcoming AI Thumbnail Generator on the Horizon.
-          </div>
-          <div className="text-rose-400 max-md:text-xs ">Keep an Eye Out. Stay Connected.</div>
-        </div>
       </div>
     </div>
   );

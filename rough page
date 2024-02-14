@@ -17,4 +17,99 @@ AIzaSyBsOUaQ07lf7wjAoOBb06JpIwiozyuiQCg
       4000003560000008
 
 
-      
+      <Carousel
+          plugins={[
+            Autoplay({
+              delay: 3000,
+              stopOnInteraction: true,
+            }),
+          ]}
+          opts={{
+            align: "start",
+          }}
+          className="mt-10 w-full"
+        >
+          <CarouselContent>
+            <CarouselItem className="md:basis-1/6">
+              <div className="p-1">
+                <Card className="bg-zinc-800 border-0">
+                  <CardContent className="text-zinc-600 flex items-center gap-4 justify-center p-6">
+                    <YoutubeIcon />
+                    <div className="font-bold">Youtube</div>
+                  </CardContent>
+                </Card>
+              </div>
+            </CarouselItem>
+            <CarouselItem className="md:basis-1/6">
+              <div className="p-1">
+                <Card className="bg-zinc-800 border-0">
+                  <CardContent className="text-zinc-600 flex items-center gap-4 justify-center p-6">
+                    <YoutubeIcon />
+                    <div className="font-bold">Youtube</div>
+                  </CardContent>
+                </Card>
+              </div>
+            </CarouselItem>
+            <CarouselItem className="md:basis-1/6">
+              <div className="p-1">
+                <Card className="bg-zinc-800 border-0">
+                  <CardContent className="text-zinc-600 flex items-center gap-4 justify-center p-6">
+                    <YoutubeIcon />
+                    <div className="font-bold">Youtube</div>
+                  </CardContent>
+                </Card>
+              </div>
+            </CarouselItem>
+            <CarouselItem className="md:basis-1/6">
+              <div className="p-1">
+                <Card className="bg-zinc-800 border-0">
+                  <CardContent className="text-zinc-600 flex items-center gap-4 justify-center p-6">
+                    <YoutubeIcon />
+                    <div className="font-bold">Youtube</div>
+                  </CardContent>
+                </Card>
+              </div>
+            </CarouselItem>
+            <CarouselItem className="md:basis-1/6">
+              <div className="p-1">
+                <Card className="bg-zinc-800 border-0">
+                  <CardContent className="text-zinc-600 flex items-center gap-4 justify-center p-6">
+                    <YoutubeIcon />
+                    <div className="font-bold">Youtube</div>
+                  </CardContent>
+                </Card>
+              </div>
+            </CarouselItem>
+            <CarouselItem className="md:basis-1/6">
+              <div className="p-1">
+                <Card className="bg-zinc-800 border-0">
+                  <CardContent className="text-zinc-600 flex items-center gap-4 justify-center p-6">
+                    <YoutubeIcon />
+                    <div className="font-bold">Youtube</div>
+                  </CardContent>
+                </Card>
+              </div>
+            </CarouselItem>
+            <CarouselItem className="md:basis-1/6">
+              <div className="p-1">
+                <Card className="bg-zinc-800 border-0">
+                  <CardContent className="text-zinc-600 flex items-center gap-4 justify-center p-6">
+                    <YoutubeIcon />
+                    <div className="font-bold">Youtube</div>
+                  </CardContent>
+                </Card>
+              </div>
+            </CarouselItem>
+            <CarouselItem className="md:basis-1/6">
+              <div className="p-1">
+                <Card className="bg-zinc-800 border-0">
+                  <CardContent className="text-zinc-600 flex items-center gap-4 justify-center p-6">
+                    <YoutubeIcon />
+                    <div className="font-bold">Youtube</div>
+                  </CardContent>
+                </Card>
+              </div>
+            </CarouselItem>
+          </CarouselContent>
+        </Carousel>
+

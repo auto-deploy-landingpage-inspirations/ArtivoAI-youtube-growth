@@ -79,7 +79,10 @@ const LandingPage = () => {
         </div>
         <div className="flex items-center gap-x-4">
           <Link href={isSignedIn ? "/dashboard" : "/sign-in"}>
-            <Button variant={"ghost"} className="text-sm rounded-3xl max-md:hidden">
+            <Button
+              variant={"ghost"}
+              className="text-sm rounded-3xl max-md:hidden"
+            >
               DASHBOARD
             </Button>
           </Link>
@@ -126,13 +129,12 @@ const LandingPage = () => {
             Create content using AI 10x faster.
           </div>
           <div className="max-md:flex max-md:flex-col max-md:gap-6">
-          <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
+            <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
               <Button
                 variant="ghost"
                 className="p-4 md:hidden rounded-3xl font-semibold"
               >
                 Go to Dashboard
-                
               </Button>
             </Link>
             <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
@@ -162,217 +164,24 @@ const LandingPage = () => {
         </div>
       </div>
       {/* -------------------------------BOX 1---------------------------------- */}
-      <div className="text-zinc-100 p-3 rounded-3xl bg-zinc-800 mt-10 text-center min-[1440px]:space-y-6 lg:space-y-2 space-y-1 shadow-2xl shadow-zinc-950">
-        <Carousel
-          plugins={[
-            Autoplay({
-              delay: 3000,
-              stopOnInteraction: true,
-            }),
-          ]}
-          opts={{
-            align: "start",
-          }}
-          className="w-full"
-        >
-          <CarouselContent>
-            <CarouselItem className="md:basis-1/6">
-              <div className="p-1">
-                <Card className="bg-zinc-800 border-0">
-                  <CardContent className="text-zinc-600 flex items-center gap-4 justify-center p-6">
-                    <YoutubeIcon />
-                    <div className="font-bold">Youtube</div>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/6">
-              <div className="p-1">
-                <Card className="bg-zinc-800 border-0">
-                  <CardContent className="text-zinc-600 flex items-center gap-4 justify-center p-6">
-                    <YoutubeIcon />
-                    <div className="font-bold">Youtube</div>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/6">
-              <div className="p-1">
-                <Card className="bg-zinc-800 border-0">
-                  <CardContent className="text-zinc-600 flex items-center gap-4 justify-center p-6">
-                    <YoutubeIcon />
-                    <div className="font-bold">Youtube</div>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/6">
-              <div className="p-1">
-                <Card className="bg-zinc-800 border-0">
-                  <CardContent className="text-zinc-600 flex items-center gap-4 justify-center p-6">
-                    <YoutubeIcon />
-                    <div className="font-bold">Youtube</div>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/6">
-              <div className="p-1">
-                <Card className="bg-zinc-800 border-0">
-                  <CardContent className="text-zinc-600 flex items-center gap-4 justify-center p-6">
-                    <YoutubeIcon />
-                    <div className="font-bold">Youtube</div>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/6">
-              <div className="p-1">
-                <Card className="bg-zinc-800 border-0">
-                  <CardContent className="text-zinc-600 flex items-center gap-4 justify-center p-6">
-                    <YoutubeIcon />
-                    <div className="font-bold">Youtube</div>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/6">
-              <div className="p-1">
-                <Card className="bg-zinc-800 border-0">
-                  <CardContent className="text-zinc-600 flex items-center gap-4 justify-center p-6">
-                    <YoutubeIcon />
-                    <div className="font-bold">Youtube</div>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/6">
-              <div className="p-1">
-                <Card className="bg-zinc-800 border-0">
-                  <CardContent className="text-zinc-600 flex items-center gap-4 justify-center p-6">
-                    <YoutubeIcon />
-                    <div className="font-bold">Youtube</div>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-          </CarouselContent>
-        </Carousel>
-        
+      <div className="text-zinc-100 p-8 rounded-3xl bg-zinc-800 mt-10 text-center min-[1440px]:space-y-6 lg:space-y-2 space-y-1 shadow-2xl shadow-zinc-950">
         <div className="md:text-4xl max-md:text-xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
           Optimize Your YouTube Visibility
         </div>
         <div className="md:text-4xl max-md:text-xl font-bold">with AI</div>
         <p className="max-md:text-sm">
           Unlock effective keyword strategies, compelling titles, and engaging
-          descriptions <br className="max-md:hidden" /> to enhance your views and attract more subscribers
-          organically.
+          descriptions <br className="max-md:hidden" /> to enhance your views
+          and attract more subscribers organically.
         </p>
         <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
           <h1 className="text-indigo-400 font-bold text-center pt-16 max-md:pt-8">
             Start Free Today.
           </h1>
         </Link>
-        
-        <Carousel
-          plugins={[
-            Autoplay({
-              delay: 3000,
-              stopOnInteraction: true,
-            }),
-          ]}
-          opts={{
-            align: "start",
-          }}
-          className="mt-10 w-full"
-        >
-          <CarouselContent>
-            <CarouselItem className="md:basis-1/6">
-              <div className="p-1">
-                <Card className="bg-zinc-800 border-0">
-                  <CardContent className="text-zinc-600 flex items-center gap-4 justify-center p-6">
-                    <YoutubeIcon />
-                    <div className="font-bold">Youtube</div>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/6">
-              <div className="p-1">
-                <Card className="bg-zinc-800 border-0">
-                  <CardContent className="text-zinc-600 flex items-center gap-4 justify-center p-6">
-                    <YoutubeIcon />
-                    <div className="font-bold">Youtube</div>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/6">
-              <div className="p-1">
-                <Card className="bg-zinc-800 border-0">
-                  <CardContent className="text-zinc-600 flex items-center gap-4 justify-center p-6">
-                    <YoutubeIcon />
-                    <div className="font-bold">Youtube</div>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/6">
-              <div className="p-1">
-                <Card className="bg-zinc-800 border-0">
-                  <CardContent className="text-zinc-600 flex items-center gap-4 justify-center p-6">
-                    <YoutubeIcon />
-                    <div className="font-bold">Youtube</div>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/6">
-              <div className="p-1">
-                <Card className="bg-zinc-800 border-0">
-                  <CardContent className="text-zinc-600 flex items-center gap-4 justify-center p-6">
-                    <YoutubeIcon />
-                    <div className="font-bold">Youtube</div>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/6">
-              <div className="p-1">
-                <Card className="bg-zinc-800 border-0">
-                  <CardContent className="text-zinc-600 flex items-center gap-4 justify-center p-6">
-                    <YoutubeIcon />
-                    <div className="font-bold">Youtube</div>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/6">
-              <div className="p-1">
-                <Card className="bg-zinc-800 border-0">
-                  <CardContent className="text-zinc-600 flex items-center gap-4 justify-center p-6">
-                    <YoutubeIcon />
-                    <div className="font-bold">Youtube</div>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/6">
-              <div className="p-1">
-                <Card className="bg-zinc-800 border-0">
-                  <CardContent className="text-zinc-600 flex items-center gap-4 justify-center p-6">
-                    <YoutubeIcon />
-                    <div className="font-bold">Youtube</div>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-          </CarouselContent>
-        </Carousel>
       </div>
       {/* --------------------------------BOX 2----------------------------------- */}
       <div className="pt-12 pb-12">
-        
         <div className="flex flex-col justify-center items-center">
           <h1 className="text-2xl md:text-4xl font-bold text-zinc-100 gap-3 flex items-center">
             Introducing
@@ -528,10 +337,18 @@ const LandingPage = () => {
         </h1>
         <div className="flex justify-center sm:space-x-4 max-sm:space-y-4 max-sm:flex-col">
           <div className=" text-zinc-100 text-center mt-14 rounded-3xl bg-zinc-900 p-10 w-auto">
-            <div className="font-bold min-[1440px]:text-3xl lg:text-2xl md:text-xl text-lg">Free Plan</div>
-            <div className="font-bold text-zinc-500 lg:text-sm text-xs">For newbies</div>
-            <div className="min-[1440px]:text-6xl md:text-5xl text-4xl my-5 font-bold">$0 </div>
-            <div className="text-zinc-500 font-semibold lg:text-sm text-xs">Per Month</div>
+            <div className="font-bold min-[1440px]:text-3xl lg:text-2xl md:text-xl text-lg">
+              Free Plan
+            </div>
+            <div className="font-bold text-zinc-500 lg:text-sm text-xs">
+              For newbies
+            </div>
+            <div className="min-[1440px]:text-6xl md:text-5xl text-4xl my-5 font-bold">
+              $0{" "}
+            </div>
+            <div className="text-zinc-500 font-semibold lg:text-sm text-xs">
+              Per Month
+            </div>
             <Link href={isSignedIn ? "/dashboard" : "/sign-in"}>
               <Button
                 variant={"ghost"}
@@ -571,7 +388,9 @@ const LandingPage = () => {
                 ( 165.94 INR )
               </span>
             </div>
-            <div className="text-zinc-500 font-semibold lg:text-sm text-xs">Per Month</div>
+            <div className="text-zinc-500 font-semibold lg:text-sm text-xs">
+              Per Month
+            </div>
             <Button
               disabled={loading}
               onClick={onSubscribe}
@@ -626,10 +445,10 @@ const LandingPage = () => {
         </h1>
         <h1 className="min-[1440px]:text-base md:text-sm text-xs text-zinc-400 font-semibold">
           Become part of the thriving community leveraging ArtivoAI for channel
-          <br className="max-md:hidden"/>
+          <br className="max-md:hidden" />
           expansion Connect with the multitude of content creators utilizing
-          ArtivoAI <br className="max-md:hidden"/> to elevate their channels and achieve substantial
-          growth.
+          ArtivoAI <br className="max-md:hidden" /> to elevate their channels
+          and achieve substantial growth.
         </h1>
         <div>
           <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
@@ -645,28 +464,19 @@ const LandingPage = () => {
       </div>
       {/* -----------------------------------FOOTER-------------------------------- */}
       <div>
-      <div className="md:ml-[21vw] md:w-[50vw]">
-          <AspectRatio ratio={16 / 7}>
-            <Image
-              fill
-              alt="image"
-              src="/hero.png"
-              className="drop-shadow-[0_25px_25px_rgba(9,9,11,0.5)]"
-            />
-          </AspectRatio>
+        <div className="flex max-md:flex-col max-md:items-center max-md:gap-2 justify-between shadow-2xl shadow-zinc-950 bg-zinc-800 rounded-t-3xl p-6">
+          <div className="text-zinc-300 font-bold lg:text-sm text-xs">
+            © 2024 ArtivoAI. All rights reserved.
+          </div>
+          <Minus className="text-zinc-300 max-lg:hidden" />
+          <Minus className="text-zinc-300 max-md:hidden" />
+          <Minus className="text-zinc-300 max-md:hidden" />
+          <Minus className="text-zinc-300 max-md:hidden" />
+          <div className="text-zinc-300 flex gap-4 font-bold lg:text-sm text-xs">
+            Made in India with Love.{" "}
+            <Heart className="text-red-500 lg:h-5 lg:w-5 h-4 w-4" />
+          </div>
         </div>
-      <div className="flex max-md:flex-col max-md:items-center max-md:gap-2 justify-between shadow-2xl shadow-zinc-950 bg-zinc-800 rounded-t-3xl p-6">
-        <div className="text-zinc-300 font-bold lg:text-sm text-xs">
-          © 2024 ArtivoAI. All rights reserved.
-        </div>
-        <Minus className="text-zinc-300 max-lg:hidden" />
-        <Minus className="text-zinc-300 max-md:hidden" />
-        <Minus className="text-zinc-300 max-md:hidden" />
-        <Minus className="text-zinc-300 max-md:hidden" />
-        <div className="text-zinc-300 flex gap-4 font-bold lg:text-sm text-xs">
-          Made in India with Love. <Heart className="text-red-500 lg:h-5 lg:w-5 h-4 w-4" />
-        </div>
-      </div>
       </div>
     </div>
   );
