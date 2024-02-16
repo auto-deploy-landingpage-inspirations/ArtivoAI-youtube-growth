@@ -48,36 +48,39 @@ const LandingPage = () => {
     element?.scrollIntoView({ behavior: "smooth", inline: "nearest" });
   };
   return (
-    <div className="h-full space-y-8 md:space-y-10 max-md:ml-[2vw] max-md:mr-[2vw] md:ml-[4vw] md:mr-[4vw]">
+    <div className="h-full space-y-8 md:space-y-10 max-md:ml-[4vw] max-md:mr-[4vw] md:ml-[4vw] md:mr-[4vw]">
       {/* ------------------------------NAVBAR----------------------------------- */}
-      <nav className=" md:mt-2 w-[80vw] ml-[8vw] md:w-[75vw] md:ml-[8.5vw] lg:w-[55vw] lg:ml-[18.5vw] min-[1440px]:w-[40vw] min-[1440px]:ml-[26vw] fixed z-10  p-3 backdrop-blur-sm bg-black/40  rounded-3xl flex items-center justify-around">
+      <nav className=" md:mt-2 w-[85vw] ml-[3.5vw] md:w-[80vw] md:ml-[6vw] lg:w-[60vw] lg:ml-[16vw] min-[1440px]:w-[50vw] min-[1440px]:ml-[21vw] fixed z-10 px-6 p-3 bg-zinc-900  rounded-3xl flex items-center justify-between">
         <div>
           <div
             onClick={() => scrolltoHash("top")}
             className="flex items-center cursor-pointer"
           >
-            <div className="relative h-6 w-6 mr-2">
+            <div className="relative h-8 w-8 mr-2">
               <Image fill alt="Logo" src="/logo.png" />
             </div>
-            <h1 className={cn("text-xl font-bold text-white")}>ArtivoAI</h1>
+            <h1 className={cn("text-2xl font-extrabold text-white")}>
+              ArtivoAI
+            </h1>
           </div>
         </div>
-        <div className="flex gap-x-4 max-md:hidden">
-          <div
-            onClick={() => scrolltoHash("faq")}
-            className="text-zinc-400 text-sm font-bold cursor-pointer  hover:text-zinc-200"
-          >
-            FAQ
-          </div>
 
-          <div
-            onClick={() => scrolltoHash("pricing")}
-            className="text-zinc-400 text-sm font-bold cursor-pointer hover:text-zinc-200"
-          >
-            PRICING
-          </div>
-        </div>
         <div className="flex items-center gap-x-4">
+          <div className="flex gap-x-4 max-md:hidden">
+            <div
+              onClick={() => scrolltoHash("faq")}
+              className="text-zinc-400 text-sm font-bold cursor-pointer  hover:text-zinc-200"
+            >
+              FAQ
+            </div>
+
+            <div
+              onClick={() => scrolltoHash("pricing")}
+              className="text-zinc-400 text-sm font-bold cursor-pointer hover:text-zinc-200"
+            >
+              PRICING
+            </div>
+          </div>
           <Link href={isSignedIn ? "/dashboard" : "/sign-in"}>
             <Button
               variant={"ghost"}
@@ -95,81 +98,87 @@ const LandingPage = () => {
       </nav>
       <div id="top" className="pt-px"></div>
       {/* ----------------------------HERO SECTION------------------------------- */}
-      <div className="text-zinc-100 bg-gradient-to-b from-zinc-800 to-zinc-900  rounded-3xl font-bold pt-20 pb-10 text-center shadow-2xl shadow-zinc-950">
-        <div className="space-y-6">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl min-[1440px]:text-5xl font-bold">
-            Crafted to enhance your <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-pink-500">
-              YouTube
-            </span>{" "}
-            viewership
-          </h1>
-          <h1 className="text-sm md:text-base text-zinc-400 font-semibold">
-            Grab free tips and friendly advice to nurture your <br /> YouTube
-            channel's growth with a smile.
-          </h1>
-          <h1 className="text-2xl">Get Started With</h1>
-          <div className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-pink-500">
-            <TypewriterComponent
-              options={{
-                strings: [
-                  "AI Coach.",
-                  "Script Generation.",
-                  "Music Generation.",
-                  "Description Generation.",
-                  "Title Generation.",
-                  "Tags Generation.",
-                ],
-                autoStart: true,
-                loop: true,
-              }}
-            />
+      <div className="text-zinc-900 bg-gradient-to-b from-zinc-100 via-zinc-200 to-purple-700  rounded-3xl font-bold max-md:pt-32 pt-40 text-center shadow-2xl shadow-zinc-950">
+        <div className="space-y-12">
+          <div className="space-y-4">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl min-[1440px]:text-6xl font-extrabold">
+              Crafted to enhance your <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
+                YouTube
+              </span>{" "}
+              viewership
+            </h1>
+            <h1 className="text-sm md:text-lg text-zinc-900 font-bold">
+              Grab free tips and friendly advice to nurture your <br /> YouTube
+              channel's growth with a smile.
+            </h1>
           </div>
-          <div className="text-sm md:text-base font-semibold text-zinc-400">
-            Create content using AI 10x faster.
-          </div>
-          <div className="max-md:flex max-md:flex-col max-md:gap-6">
-            <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
-              <Button
-                variant="ghost"
-                className="p-4 md:hidden rounded-3xl font-semibold"
-              >
-                Go to Dashboard
-              </Button>
-            </Link>
-            <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
-              <Button
-                variant="ghost"
-                className="md:text-base p-4 md:p-6 rounded-3xl font-semibold"
-              >
-                <FcGoogle className="mr-3 h-7 w-7" /> Sign up with your Google
-                account
-              </Button>
-            </Link>
-          </div>
-          <div className="text-zinc-400 text-xs md:text-sm font-semibold">
-            No credit card required.
-          </div>
-        </div>
 
-        <div className="mt-6 rounded-3xl max-md:w-[80vw] max-md:ml-[8vw] md:ml-[11vw] md:w-[70vw]">
-          <AspectRatio ratio={16 / 9}>
-            <Image
-              fill
-              alt="image"
-              src="/dashboard.png"
-              className="rounded-3xl max-md:rounded-lg"
-            />
-          </AspectRatio>
+          <div className="space-y-2">
+            <div className="text-sm md:text-base font-light text-zinc-900">
+              Create content using AI 10x faster.
+            </div>
+            <div className="max-md:flex max-md:flex-col max-md:gap-4">
+              <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
+                <Button
+                  variant="ghost"
+                  className="p-4 md:hidden text-zinc-900 rounded-3xl font-semibold"
+                >
+                  Go to Dashboard
+                </Button>
+              </Link>
+              <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
+                <Button
+                  variant="premium"
+                  className="md:text-base p-4 md:p-6 from-zinc-900 to-zinc-900 rounded-3xl font-bold"
+                >
+                  <FcGoogle className="mr-3 h-7 w-7" /> Sign up with your Google
+                  account
+                </Button>
+              </Link>
+            </div>
+            <div className="text-zinc-900 text-xs md:text-sm font-light">
+              No credit card required.
+            </div>
+          </div>
+          <div className="mt-6 rounded-3xl max-md:w-[80vw] max-md:ml-[6vw] md:ml-[11vw] md:w-[70vw]">
+            <AspectRatio ratio={16 / 9}>
+              <Image
+                fill
+                alt="image"
+                src="/dashboard.png"
+                className="rounded-t-3xl max-md:rounded-lg"
+              />
+            </AspectRatio>
+          </div>
         </div>
       </div>
       {/* -------------------------------BOX 1---------------------------------- */}
-      <div className="text-zinc-100 p-8 rounded-3xl bg-zinc-800 mt-10 text-center min-[1440px]:space-y-6 lg:space-y-2 space-y-1 shadow-2xl shadow-zinc-950">
-        <div className="md:text-4xl max-md:text-xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-          Optimize Your YouTube Visibility
+      <div className="text-zinc-100 p-8 rounded-3xl bg-zinc-900 mt-10 text-center min-[1440px]:space-y-6 lg:space-y-2 space-y-1">
+        <h1 className="text-5xl font-semibold">Get Started With</h1>
+        <div className="text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-pink-500">
+          <TypewriterComponent
+            options={{
+              strings: [
+                "AI Coach.",
+                "Script Generation.",
+                "Music Generation.",
+                "Description Generation.",
+                "Title Generation.",
+                "Tags Generation.",
+              ],
+              autoStart: true,
+              loop: true,
+            }}
+          />
         </div>
-        <div className="md:text-4xl max-md:text-xl font-bold">with AI</div>
-        <p className="max-md:text-sm">
+        <div className="md:text-2xl max-md:text-xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
+          Optimize Your YouTube Visibility{" "}
+          <span className="md:text-2xl max-md:text-xl font-bold text-zinc-100">
+            with AI
+          </span>
+        </div>
+        <p className="max-md:text-sm font-light">
           Unlock effective keyword strategies, compelling titles, and engaging
           descriptions <br className="max-md:hidden" /> to enhance your views
           and attract more subscribers organically.
@@ -217,15 +226,15 @@ const LandingPage = () => {
       {/* -------------------------------FAQ BOX------------------------------------ */}
       <div
         id="faq"
-        className=" bg-gradient-to-b from-zinc-800 to-zinc-900 rounded-3xl flex flex-col space-y-14 justify-center items-center pt-12 pb-12 min-[1440px]:pt-32 lg:pt-28 md:pt-16 min-[1440px]:pb-32 lg:pb-28 md:pb-16 shadow-2xl shadow-zinc-950"
+        className=" bg-gradient-to-b from-zinc-100 via-zinc-200 to-purple-700 rounded-3xl flex flex-col space-y-14 justify-center items-center pt-12 min-[1440px]:pt-32 lg:pt-28 md:pt-16 shadow-2xl shadow-zinc-950"
       >
-        <h1 className="font-medium text-zinc-100 text-2xl min-[1440px]:text-6xl lg:text-5xl md:text-4xl">
+        <h1 className="font-bold text-zinc-900 text-2xl min-[1440px]:text-6xl lg:text-5xl md:text-4xl">
           Frequently Asked{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-yellow-200">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
             Questions
           </span>
         </h1>
-        <div className="bg-zinc-900 min-[1440px]:w-8/12 lg:w-11/12 md:w-9/12 w-11/12 p-10 rounded-3xl">
+        <div className="bg-zinc-900 min-[1440px]:w-8/12 lg:w-11/12 md:w-9/12 w-11/12 p-10 rounded-t-3xl">
           <Accordion type="single" collapsible className="text-zinc-100">
             <AccordionItem value="item-1">
               <AccordionTrigger>
@@ -328,15 +337,12 @@ const LandingPage = () => {
         </div>
       </div>
       {/* --------------------------------PRICING BOX------------------------------- */}
-      <div
-        id="pricing"
-        className=" rounded-3xl lg:p-28 md:p-16 p-6 shadow-2xl shadow-zinc-950 bg-gradient-to-b from-zinc-800 to-zinc-900"
-      >
+      <div id="pricing" className=" rounded-3xl lg:p-28 md:p-16 p-6">
         <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-cyan-500 min-[1440px]:text-6xl md:text-4xl lg:text-5xl text-3xl pt-8 pb-4 font-bold">
           Pricing
         </h1>
         <div className="flex justify-center sm:space-x-4 max-sm:space-y-4 max-sm:flex-col">
-          <div className=" text-zinc-100 text-center mt-14 rounded-3xl bg-zinc-900 p-10 w-auto">
+          <div className=" text-zinc-100 text-center mt-14 rounded-3xl bg-gradient-to-b from-zinc-800 to-zinc-900 p-10 w-auto">
             <div className="font-bold min-[1440px]:text-3xl lg:text-2xl md:text-xl text-lg">
               Free Plan
             </div>
@@ -372,7 +378,7 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
-          <div className=" text-zinc-100 text-center mt-14 rounded-3xl bg-zinc-900 p-10 w-auto">
+          <div className=" text-zinc-100 text-center mt-14 rounded-3xl bg-gradient-to-b from-zinc-800 to-zinc-900 p-10 w-auto">
             <div className="font-bold min-[1440px]:text-3xl lg:text-2xl md:text-xl text-lg text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-cyan-500">
               Pro Plan
             </div>
@@ -436,7 +442,7 @@ const LandingPage = () => {
         </div>
       </div>
       {/* ---------------------------------LAST BLOCK------------------------------ */}
-      <div className="text-center space-y-8 p-6 pt-24">
+      <div className="text-center space-y-10 p-6 pt-24 pb-24">
         <div className="relative min-[1440px]:h-32 lg:h-28 min-[1440px]:w-32 lg:w-28 h-24 w-24 flex justify-center mx-auto">
           <Image fill alt="Logo" src="/logo.png" />
         </div>
@@ -468,10 +474,6 @@ const LandingPage = () => {
           <div className="text-zinc-300 font-bold lg:text-sm text-xs">
             © 2024 ArtivoAI. All rights reserved.
           </div>
-          <Minus className="text-zinc-300 max-lg:hidden" />
-          <Minus className="text-zinc-300 max-md:hidden" />
-          <Minus className="text-zinc-300 max-md:hidden" />
-          <Minus className="text-zinc-300 max-md:hidden" />
           <div className="text-zinc-300 flex gap-4 font-bold lg:text-sm text-xs">
             Made in India with Love.{" "}
             <Heart className="text-red-500 lg:h-5 lg:w-5 h-4 w-4" />
