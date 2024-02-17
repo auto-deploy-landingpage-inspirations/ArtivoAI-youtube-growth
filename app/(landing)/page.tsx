@@ -56,10 +56,14 @@ const LandingPage = () => {
             onClick={() => scrolltoHash("top")}
             className="flex items-center cursor-pointer"
           >
-            <div className="relative h-8 w-8 mr-2">
+            <div className="relative max-md:h-5 max-md:w-5 h-8 w-8 mr-2">
               <Image fill alt="Logo" src="/logo.png" />
             </div>
-            <h1 className={cn("text-2xl font-extrabold text-white")}>
+            <h1
+              className={cn(
+                "text-2xl max-md:text-xl font-extrabold text-white"
+              )}
+            >
               ArtivoAI
             </h1>
           </div>
@@ -98,10 +102,10 @@ const LandingPage = () => {
       </nav>
       <div id="top" className="pt-px"></div>
       {/* ----------------------------HERO SECTION------------------------------- */}
-      <div className="text-zinc-900 bg-gradient-to-b from-zinc-100 via-zinc-200 to-purple-700  rounded-3xl font-bold max-md:pt-32 pt-40 text-center shadow-2xl shadow-zinc-950">
+      <div className="text-zinc-900 bg-gradient-to-b from-zinc-100 via-zinc-200 to-purple-700  rounded-3xl font-bold max-md:pt-28 pt-40 text-center shadow-2xl shadow-zinc-950">
         <div className="space-y-12">
-          <div className="space-y-4">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl min-[1440px]:text-6xl font-extrabold">
+          <div className="space-y-4 max-md:p-4">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl min-[1440px]:text-6xl font-extrabold">
               Crafted to enhance your <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
                 YouTube
@@ -109,8 +113,9 @@ const LandingPage = () => {
               viewership
             </h1>
             <h1 className="text-sm md:text-lg text-zinc-900 font-bold">
-              Grab free tips and friendly advice to nurture your <br /> YouTube
-              channel's growth with a smile.
+              Grab free tips and friendly advice to nurture your{" "}
+              <br className="max-md:hidden" /> YouTube channel's growth with a
+              smile.
             </h1>
           </div>
 
@@ -122,7 +127,7 @@ const LandingPage = () => {
               <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
                 <Button
                   variant="ghost"
-                  className="p-4 md:hidden text-zinc-900 rounded-3xl font-semibold"
+                  className="p-4 md:hidden text-zinc-900 hover:text-zinc-800 rounded-3xl font-semibold"
                 >
                   Go to Dashboard
                 </Button>
@@ -130,10 +135,10 @@ const LandingPage = () => {
               <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
                 <Button
                   variant="premium"
-                  className="md:text-base p-4 md:p-6 from-zinc-900 to-zinc-900 rounded-3xl font-bold"
+                  className="md:text-base p-7 md:p-6 from-zinc-900 to-zinc-900 rounded-3xl font-bold"
                 >
-                  <FcGoogle className="mr-3 h-7 w-7" /> Sign up with your Google
-                  account
+                  <FcGoogle className="mr-3 h-7 w-7" /> Sign up with your{" "}
+                  <br className="md:hidden" /> Google account
                 </Button>
               </Link>
             </div>
@@ -143,20 +148,22 @@ const LandingPage = () => {
           </div>
           <div className="mt-6 rounded-3xl max-md:w-[80vw] max-md:ml-[6vw] md:ml-[11vw] md:w-[70vw]">
             <AspectRatio ratio={16 / 9}>
-              <Image
-                fill
-                alt="image"
-                src="/dashboard.png"
-                className="rounded-t-3xl max-md:rounded-lg"
-              />
+              <video
+                autoPlay
+                loop
+                muted
+                className="rounded-t-3xl max-md:rounded-t-2xl border-x-4 border-t-4 border-zinc-900"
+              >
+                <source src="/Artivoai.mp4" />
+              </video>
             </AspectRatio>
           </div>
         </div>
       </div>
       {/* -------------------------------BOX 1---------------------------------- */}
-      <div className="text-zinc-100 p-8 rounded-3xl bg-zinc-900 mt-10 text-center min-[1440px]:space-y-6 lg:space-y-2 space-y-1">
-        <h1 className="text-5xl font-semibold">Get Started With</h1>
-        <div className="text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-pink-500">
+      <div className="text-zinc-100 p-10 rounded-3xl bg-zinc-800 shadow-2xl shadow-zinc-950 text-center min-[1440px]:space-y-6 lg:space-y-2 space-y-1">
+        <h1 className="text-5xl max-md:text-2xl font-semibold">Get Started With</h1>
+        <div className="text-2xl max-md:text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-pink-500">
           <TypewriterComponent
             options={{
               strings: [
@@ -172,54 +179,72 @@ const LandingPage = () => {
             }}
           />
         </div>
-        <div className="md:text-2xl max-md:text-xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-          Optimize Your YouTube Visibility{" "}
-          <span className="md:text-2xl max-md:text-xl font-bold text-zinc-100">
-            with AI
-          </span>
-        </div>
-        <p className="max-md:text-sm font-light">
-          Unlock effective keyword strategies, compelling titles, and engaging
-          descriptions <br className="max-md:hidden" /> to enhance your views
-          and attract more subscribers organically.
-        </p>
-        <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
-          <h1 className="text-indigo-400 font-bold text-center pt-16 max-md:pt-8">
-            Start Free Today.
-          </h1>
-        </Link>
       </div>
-      {/* --------------------------------BOX 2----------------------------------- */}
-      <div className="pt-12 pb-12">
-        <div className="flex flex-col justify-center items-center">
-          <h1 className="text-2xl md:text-4xl font-bold text-zinc-100 gap-3 flex items-center">
-            Introducing
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
-              AI Mentor
-            </span>
-            <Badge className="bg-gradient-to-r from-red-500 to-orange-500 border-0">
-              NEW
-            </Badge>
-          </h1>
-          <p className="pt-6 text-sm md:text-lg font-light text-zinc-400 text-center">
-            Access your round-the-clock AI Mentor
-            <br /> Gain insights and support whenever you need.
-          </p>
-          <Link href={isSignedIn ? "/mentor" : "/sign-up"}>
-            <h1 className="text-red-500 text-center font-bold pt-12 pb-12">
-              Start Chatting Now.
-            </h1>
-          </Link>
+      {/* -------------------------------GRID------------------------------------ */}
+      <div className="space-y-10">
+        <div className="p-4 bg-zinc-800 rounded-3xl flex max-md:flex-col gap-6 shadow-2xl shadow-zinc-950">
+          <div className="w-[50vw] max-md:w-full">
+            <AspectRatio ratio={16 / 9}>
+              <Image
+                fill
+                alt="image"
+                src="/dashboard.png"
+                className="rounded-2xl max-md:rounded-lg"
+              />
+            </AspectRatio>
+          </div>
+          <div className="flex flex-col gap-4 items-center justify-center w-[50vw] max-md:w-full">
+            <div className="lg:text-2xl md:text-lg max-md:text-xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent text-center">
+              Optimize Your YouTube Visibility{" "}
+              <span className="lg:text-2xl md:text-lg max-md:text-xl font-bold text-zinc-100">
+                with AI
+              </span>
+            </div>
+            <p className=" max-lg:text-xs font-light text-center text-zinc-400">
+              Unlock effective keyword strategies, compelling titles, and
+              engaging descriptions <br className="max-md:hidden" /> to enhance
+              your views and attract more subscribers organically.
+            </p>
+            <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
+              <h1 className="text-indigo-400 font-bold text-center lg:pt-16 max-md:pt-8">
+                Start Free Today.
+              </h1>
+            </Link>
+          </div>
         </div>
-        <div className="lg:ml-[18.5vw] lg:w-[55vw] md:ml-[11vw] md:w-[70vw]">
-          <AspectRatio ratio={16 / 9}>
-            <Image
-              fill
-              alt="image"
-              src="/mentor.png"
-              className="rounded-3xl max-md:rounded-lg shadow-2xl shadow-zinc-950"
-            />
-          </AspectRatio>
+        <div>
+          <div className="p-4 bg-zinc-800 rounded-3xl flex max-md:flex-col gap-6 shadow-2xl shadow-zinc-950">
+            <div className="flex flex-col justify-center items-center w-[50vw] max-md:w-full">
+              <h1 className="text-xl md:text-lg lg:text-4xl font-bold text-zinc-100 gap-3 flex items-center">
+                Introducing
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
+                  AI Mentor
+                </span>
+                <Badge className="bg-gradient-to-r from-red-500 to-orange-500 border-0">
+                  NEW
+                </Badge>
+              </h1>
+              <p className="pt-6 text-xs lg:text-lg font-light text-zinc-400 text-center">
+                Access your round-the-clock AI Mentor
+                <br /> Gain insights and support whenever you need.
+              </p>
+              <Link href={isSignedIn ? "/mentor" : "/sign-up"}>
+                <h1 className="text-red-500 text-center font-bold pt-12">
+                  Start Chatting Now.
+                </h1>
+              </Link>
+            </div>
+            <div className="w-[50vw] max-md:w-full">
+              <AspectRatio ratio={16 / 9}>
+                <Image
+                  fill
+                  alt="image"
+                  src="/mentor.png"
+                  className="rounded-2xl max-md:rounded-lg"
+                />
+              </AspectRatio>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -228,7 +253,7 @@ const LandingPage = () => {
         id="faq"
         className=" bg-gradient-to-b from-zinc-100 via-zinc-200 to-purple-700 rounded-3xl flex flex-col space-y-14 justify-center items-center pt-12 min-[1440px]:pt-32 lg:pt-28 md:pt-16 shadow-2xl shadow-zinc-950"
       >
-        <h1 className="font-bold text-zinc-900 text-2xl min-[1440px]:text-6xl lg:text-5xl md:text-4xl">
+        <h1 className="font-bold text-zinc-900 text-center text-3xl min-[1440px]:text-6xl lg:text-5xl md:text-4xl">
           Frequently Asked{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
             Questions
