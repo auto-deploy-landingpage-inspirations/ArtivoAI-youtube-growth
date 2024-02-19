@@ -95,8 +95,7 @@ const CoachPage = () => {
               onSubmit={form.handleSubmit(onSubmit)}
               className="
                 rounded-2xl 
-                shadow-2xl shadow-zinc-950
-                bg-zinc-800 
+                bg-zinc-900 
                 w-full 
                 p-4 
                 px-3 
@@ -110,9 +109,9 @@ const CoachPage = () => {
                 name="prompt"
                 render={({ field }) => (
                   <FormItem className="col-span-12 lg:col-span-10">
-                    <FormControl className="m-0 pl-2 bg-zinc-800 text-zinc-100 rounded-2xl">
+                    <FormControl className="m-0 pl-2 bg-zinc-900 text-zinc-100 rounded-2xl">
                       <Input
-                        className=" border-0  outline-none placeholder:text-zinc-400"
+                        className=" border-0  outline-none placeholder:text-zinc-500"
                         disabled={isLoading}
                         placeholder="Ask me anything."
                         {...field}

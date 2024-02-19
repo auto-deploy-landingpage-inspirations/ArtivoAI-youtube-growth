@@ -26,6 +26,11 @@ import {
 import { useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
+import {
+  TextRevealCard,
+  TextRevealCardDescription,
+  TextRevealCardTitle,
+} from "@/components/ui/text-reveal-card";
 
 const LandingPage = () => {
   const [loading, setLoading] = useState(false);
@@ -48,86 +53,86 @@ const LandingPage = () => {
     element?.scrollIntoView({ behavior: "smooth", inline: "nearest" });
   };
   return (
-    <div className="h-full space-y-8 md:space-y-10 max-md:ml-[4vw] max-md:mr-[4vw] md:ml-[4vw] md:mr-[4vw]">
+    <div className="h-full w-full">
       {/* ------------------------------NAVBAR----------------------------------- */}
-      <nav className=" md:mt-2 w-[85vw] ml-[3.5vw] md:w-[80vw] md:ml-[6vw] lg:w-[60vw] lg:ml-[16vw] min-[1440px]:w-[50vw] min-[1440px]:ml-[21vw] fixed z-10 px-6 p-3 bg-zinc-900  rounded-3xl flex items-center justify-between">
-        <div>
+      <nav className="w-full fixed z-10 px-[4vw] p-3 border-b border-zinc-900 bg-black/60 backdrop-blur-sm flex items-center justify-between">
+        <div className="flex items-center gap-20">
           <div
             onClick={() => scrolltoHash("top")}
             className="flex items-center cursor-pointer"
           >
-            <div className="relative max-md:h-5 max-md:w-5 h-8 w-8 mr-2">
+            <div className="relative h-5 w-5 mr-2">
               <Image fill alt="Logo" src="/logo.png" />
             </div>
             <h1
-              className={cn(
-                "text-2xl max-md:text-xl font-extrabold text-white"
-              )}
+              className={cn("text-2xl max-md:text-xl font-semibold text-white")}
             >
               ArtivoAI
             </h1>
           </div>
-        </div>
-
-        <div className="flex items-center gap-x-4">
-          <div className="flex gap-x-4 max-md:hidden">
+          <div className="flex gap-8 max-md:hidden">
             <div
               onClick={() => scrolltoHash("faq")}
-              className="text-zinc-400 text-sm font-bold cursor-pointer  hover:text-zinc-200"
+              className="text-zinc-400 text-sm font-medium cursor-pointer  hover:text-zinc-200"
             >
               FAQ
             </div>
 
             <div
               onClick={() => scrolltoHash("pricing")}
-              className="text-zinc-400 text-sm font-bold cursor-pointer hover:text-zinc-200"
+              className="text-zinc-400 text-sm font-medium cursor-pointer hover:text-zinc-200"
             >
-              PRICING
+              Pricing
             </div>
           </div>
+        </div>
+
+        <div className="flex items-center gap-x-4">
           <Link href={isSignedIn ? "/dashboard" : "/sign-in"}>
             <Button
               variant={"ghost"}
-              className="text-sm rounded-3xl max-md:hidden"
+              className="text-sm font-medium border-zinc-800 rounded-2xl max-md:hidden"
             >
-              DASHBOARD
+              Dashboard
             </Button>
           </Link>
           <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
-            <Button variant="premium" className="text-sm rounded-3xl">
+            <Button variant="premium" className="text-sm rounded-2xl">
               GET STARTED
             </Button>
           </Link>
         </div>
       </nav>
-      <div id="top" className="pt-px"></div>
       {/* ----------------------------HERO SECTION------------------------------- */}
-      <div className="text-zinc-900 bg-gradient-to-b from-zinc-100 via-zinc-200 to-purple-700  rounded-3xl font-bold max-md:pt-28 pt-40 text-center shadow-2xl shadow-zinc-950">
-        <div className="space-y-12">
-          <div className="space-y-4 max-md:p-4">
-            <h1 className="text-2xl md:text-4xl lg:text-5xl min-[1440px]:text-6xl font-extrabold">
-              Crafted to enhance your <br />
+      <div
+        id="top"
+        className="text-zinc-100 bg-black bg-grid-zinc-900/70 font-bold max-md:pt-28 pt-40 pb-20 px-[4vw] text-left flex shadow-2xl shadow-zinc-950"
+      >
+        <div className="space-y-12 max-lg:w-full w-[50vw]">
+          <div className="space-y-5">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl min-[1440px]:text-6xl font-bold">
+              Crafted to enhance your{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
                 YouTube
               </span>{" "}
               viewership
             </h1>
-            <h1 className="text-sm md:text-lg text-zinc-900 font-bold">
+            <h1 className="text-sm md:text-lg text-zinc-400 font-medium">
               Grab free tips and friendly advice to nurture your{" "}
               <br className="max-md:hidden" /> YouTube channel's growth with a
               smile.
             </h1>
           </div>
 
-          <div className="space-y-2">
-            <div className="text-sm md:text-base font-light text-zinc-900">
+          <div className="space-y-5">
+            <div className="text-sm md:text-base font-medium text-zinc-500">
               Create content using AI 10x faster.
             </div>
             <div className="max-md:flex max-md:flex-col max-md:gap-4">
               <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
                 <Button
                   variant="ghost"
-                  className="p-4 md:hidden text-zinc-900 hover:text-zinc-800 rounded-3xl font-semibold"
+                  className="p-4 md:hidden text-zinc-100 hover:text-zinc-800 rounded-2xl font-semibold"
                 >
                   Go to Dashboard
                 </Button>
@@ -135,34 +140,47 @@ const LandingPage = () => {
               <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
                 <Button
                   variant="premium"
-                  className="md:text-base p-7 md:p-6 from-zinc-900 to-zinc-900 rounded-3xl font-bold"
+                  className="md:text-base p-7 md:p-6 from-zinc-200 to-zinc-200 text-zinc-900 rounded-2xl font-bold"
                 >
                   <FcGoogle className="mr-3 h-7 w-7" /> Sign up with your{" "}
-                  <br className="md:hidden" /> Google account
+                   Google account
                 </Button>
               </Link>
             </div>
-            <div className="text-zinc-900 text-xs md:text-sm font-light">
+            <div className="text-zinc-500 text-xs md:text-sm font-medium">
               No credit card required.
             </div>
           </div>
-          <div className="mt-6 rounded-3xl max-md:w-[80vw] max-md:ml-[6vw] md:ml-[11vw] md:w-[70vw]">
-            <AspectRatio ratio={16 / 9}>
-              <video
-                autoPlay
-                loop
-                muted
-                className="rounded-t-3xl max-md:rounded-t-2xl border-x-4 border-t-4 border-zinc-900"
-              >
-                <source src="/Artivoai.mp4" />
-              </video>
-            </AspectRatio>
-          </div>
+        </div>
+        <div className="mt-6 rounded-xl max-lg:hidden md:w-[50vw]">
+          <TextRevealCard
+            text="1 Subscriber"
+            revealText="1M Subscribers"
+          >
+            <TextRevealCardTitle>
+              Might Be Yours !
+            </TextRevealCardTitle>
+            <TextRevealCardDescription>
+            Sometimes, you just need to see it.<br/> Hover to see.
+            </TextRevealCardDescription>
+          </TextRevealCard>
+          {/* <AspectRatio ratio={16 / 9}>
+            <video
+              autoPlay
+              loop
+              muted
+              className="rounded-2xl max-md:rounded-xl"
+            >
+              <source src="/Artivoai.mp4" />
+            </video>
+          </AspectRatio> */}
         </div>
       </div>
       {/* -------------------------------BOX 1---------------------------------- */}
-      <div className="text-zinc-100 p-10 rounded-3xl bg-zinc-800 shadow-2xl shadow-zinc-950 text-center min-[1440px]:space-y-6 lg:space-y-2 space-y-1">
-        <h1 className="text-5xl max-md:text-2xl font-semibold">Get Started With</h1>
+      <div className="text-zinc-100 p-10 bg-black text-center min-[1440px]:space-y-6 lg:space-y-2 space-y-1">
+        <h1 className="text-5xl max-md:text-2xl font-semibold">
+          Get Started With
+        </h1>
         <div className="text-2xl max-md:text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-pink-500">
           <TypewriterComponent
             options={{
@@ -181,9 +199,9 @@ const LandingPage = () => {
         </div>
       </div>
       {/* -------------------------------GRID------------------------------------ */}
-      <div className="space-y-10">
-        <div className="p-4 bg-zinc-800 rounded-3xl flex max-md:flex-col gap-6 shadow-2xl shadow-zinc-950">
-          <div className="w-[50vw] max-md:w-full">
+      <div className="space-y-10 bg-black px-[4vw]">
+        <div className="p-4 flex max-md:flex-col gap-6">
+          <div className="w-[50vw] max-md:w-full border border-zinc-900 rounded-2xl">
             <AspectRatio ratio={16 / 9}>
               <Image
                 fill
@@ -213,7 +231,7 @@ const LandingPage = () => {
           </div>
         </div>
         <div>
-          <div className="p-4 bg-zinc-800 rounded-3xl flex max-md:flex-col gap-6 shadow-2xl shadow-zinc-950">
+          <div className="p-4 flex max-md:flex-col gap-6">
             <div className="flex flex-col justify-center items-center w-[50vw] max-md:w-full">
               <h1 className="text-xl md:text-lg lg:text-4xl font-bold text-zinc-100 gap-3 flex items-center">
                 Introducing
@@ -234,7 +252,7 @@ const LandingPage = () => {
                 </h1>
               </Link>
             </div>
-            <div className="w-[50vw] max-md:w-full">
+            <div className="w-[50vw] max-md:w-full border border-zinc-900 rounded-2xl">
               <AspectRatio ratio={16 / 9}>
                 <Image
                   fill
@@ -251,15 +269,15 @@ const LandingPage = () => {
       {/* -------------------------------FAQ BOX------------------------------------ */}
       <div
         id="faq"
-        className=" bg-gradient-to-b from-zinc-100 via-zinc-200 to-purple-700 rounded-3xl flex flex-col space-y-14 justify-center items-center pt-12 min-[1440px]:pt-32 lg:pt-28 md:pt-16 shadow-2xl shadow-zinc-950"
+        className=" bg-gradient-to-b from-black via-black to-purple-700 flex flex-col space-y-14 justify-center items-center pt-12 min-[1440px]:pt-32 lg:pt-28 md:pt-16"
       >
-        <h1 className="font-bold text-zinc-900 text-center text-3xl min-[1440px]:text-6xl lg:text-5xl md:text-4xl">
+        <h1 className="font-bold text-zinc-100 text-center text-3xl min-[1440px]:text-6xl lg:text-5xl md:text-4xl">
           Frequently Asked{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
             Questions
           </span>
         </h1>
-        <div className="bg-zinc-900 min-[1440px]:w-8/12 lg:w-11/12 md:w-9/12 w-11/12 p-10 rounded-t-3xl">
+        <div className="bg-zinc-950 border border-zinc-900 min-[1440px]:w-8/12 lg:w-11/12 md:w-9/12 w-11/12 p-10 rounded-t-2xl">
           <Accordion type="single" collapsible className="text-zinc-100">
             <AccordionItem value="item-1">
               <AccordionTrigger>
@@ -362,12 +380,12 @@ const LandingPage = () => {
         </div>
       </div>
       {/* --------------------------------PRICING BOX------------------------------- */}
-      <div id="pricing" className=" rounded-3xl lg:p-28 md:p-16 p-6">
+      <div id="pricing" className="bg-zinc-950 lg:p-28 md:p-16 p-6">
         <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-cyan-500 min-[1440px]:text-6xl md:text-4xl lg:text-5xl text-3xl pt-8 pb-4 font-bold">
           Pricing
         </h1>
         <div className="flex justify-center sm:space-x-4 max-sm:space-y-4 max-sm:flex-col">
-          <div className=" text-zinc-100 text-center mt-14 rounded-3xl bg-gradient-to-b from-zinc-800 to-zinc-900 p-10 w-auto">
+          <div className=" text-zinc-100 text-center mt-14 rounded-2xl bg-gradient-to-b from-zinc-900 to-zinc-950 p-10 w-auto">
             <div className="font-bold min-[1440px]:text-3xl lg:text-2xl md:text-xl text-lg">
               Free Plan
             </div>
@@ -383,7 +401,7 @@ const LandingPage = () => {
             <Link href={isSignedIn ? "/dashboard" : "/sign-in"}>
               <Button
                 variant={"ghost"}
-                className="my-5 w-full p-8 rounded-3xl min-[1440px]:text-2xl lg:text-xl md:text-sm"
+                className="my-5 w-full p-8 rounded-2xl min-[1440px]:text-2xl lg:text-xl md:text-sm"
               >
                 Start for free
               </Button>
@@ -403,7 +421,7 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
-          <div className=" text-zinc-100 text-center mt-14 rounded-3xl bg-gradient-to-b from-zinc-800 to-zinc-900 p-10 w-auto">
+          <div className=" text-zinc-100 text-center mt-14 rounded-2xl bg-gradient-to-b from-zinc-900 to-zinc-950 p-10 w-auto">
             <div className="font-bold min-[1440px]:text-3xl lg:text-2xl md:text-xl text-lg text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-cyan-500">
               Pro Plan
             </div>
@@ -425,7 +443,7 @@ const LandingPage = () => {
             <Button
               disabled={loading}
               onClick={onSubscribe}
-              className="my-5 font-bold w-full p-8 rounded-3xl min-[1440px]:text-3xl min-[1440px]:hover:text-4xl lg:text-2xl md:text-xl hover:text-4xl lg:hover:text-3xl transition-all bg-gradient-to-r from-fuchsia-500 to-cyan-500"
+              className="my-5 font-bold w-full p-8 rounded-2xl min-[1440px]:text-3xl min-[1440px]:hover:text-4xl lg:text-2xl md:text-xl hover:text-4xl lg:hover:text-3xl transition-all bg-gradient-to-r from-fuchsia-500 to-cyan-500"
             >
               Subscribe
             </Button>
@@ -467,7 +485,7 @@ const LandingPage = () => {
         </div>
       </div>
       {/* ---------------------------------LAST BLOCK------------------------------ */}
-      <div className="text-center space-y-10 p-6 pt-24 pb-24">
+      <div className="text-center bg-zinc-950 space-y-10 p-6 pt-24 pb-24">
         <div className="relative min-[1440px]:h-32 lg:h-28 min-[1440px]:w-32 lg:w-28 h-24 w-24 flex justify-center mx-auto">
           <Image fill alt="Logo" src="/logo.png" />
         </div>
@@ -485,7 +503,7 @@ const LandingPage = () => {
           <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
             <Button
               variant="ghost"
-              className="md:text-base p-4 md:p-6 rounded-3xl font-semibold"
+              className="md:text-base p-4 md:p-6 bg-zinc-100 text-zinc-900 hover:text-zinc-900 rounded-2xl font-semibold"
             >
               <FcGoogle className="mr-3 h-7 w-7" /> Sign up with your Google
               account
@@ -495,7 +513,7 @@ const LandingPage = () => {
       </div>
       {/* -----------------------------------FOOTER-------------------------------- */}
       <div>
-        <div className="flex max-md:flex-col max-md:items-center max-md:gap-2 justify-between shadow-2xl shadow-zinc-950 bg-zinc-800 rounded-t-3xl p-6">
+        <div className="px-[4vw] flex max-md:flex-col max-md:items-center max-md:gap-2 justify-between bg-zinc-900 p-6">
           <div className="text-zinc-300 font-bold lg:text-sm text-xs">
             © 2024 ArtivoAI. All rights reserved.
           </div>

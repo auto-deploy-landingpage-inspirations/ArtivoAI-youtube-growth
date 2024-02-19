@@ -65,7 +65,7 @@ const Sidebar = ({
 }: SidebarProps) => {
   const pathname = usePathname();
   return (
-    <div className="space-y-4 shadow-2xl shadow-zinc-950 md:rounded-2xl py-4 flex flex-col justify-between max-md:h-dvh h-screen md:h-[95vh] bg-zinc-800 text-zinc-200 ">
+    <div className="space-y-4 md:rounded-2xl py-4 flex flex-col justify-between max-md:h-dvh h-screen md:h-[95vh] bg-zinc-900 text-zinc-200 ">
       <div className="px-3 py-2 md:flex-1">
         <Link href="/dashboard" className="flex items-center pl-3 mb-10">
           <div className="relative w-8 h-8 mr-4">
