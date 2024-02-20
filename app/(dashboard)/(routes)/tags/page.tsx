@@ -93,8 +93,8 @@ const TagsPage = () => {
               onSubmit={form.handleSubmit(onSubmit)} 
               className="
                 rounded-2xl 
-                shadow-2xl shadow-zinc-950
-                bg-zinc-800 
+                
+                bg-zinc-900 
                 w-full 
                 p-4 
                 px-3 
@@ -109,9 +109,9 @@ const TagsPage = () => {
                 name="prompt"
                 render={({ field }) => (
                   <FormItem className="col-span-12 lg:col-span-10">
-                    <FormControl className="m-0 pl-2 bg-zinc-800 text-zinc-100 rounded-2xl">
+                    <FormControl className="m-0 pl-2 bg-zinc-900 text-zinc-100 rounded-2xl">
                       <Input
-                        className=" border-0  outline-none placeholder:text-zinc-400"
+                        className=" border-0  outline-none placeholder:text-zinc-500"
                         disabled={isLoading} 
                         placeholder="Suggest me tags on topic ...." 
                         {...field}
@@ -120,7 +120,7 @@ const TagsPage = () => {
                   </FormItem>
                 )}
               />
-              <Button className="rounded-2xl bg-orange-900 hover:bg-zinc-900 col-span-12 lg:col-span-2 w-full" type="submit" disabled={isLoading} size="icon">
+              <Button className="rounded-2xl bg-orange-900 hover:bg-zinc-950 col-span-12 lg:col-span-2 w-full" type="submit" disabled={isLoading} size="icon">
                 Generate
               </Button>
             </form>
@@ -129,7 +129,7 @@ const TagsPage = () => {
 
         <div className="space-y-4 mt-4">
           {isLoading && (
-            <div className="p-8 shadow-2xl shadow-zinc-950 bg-zinc-800 rounded-2xl w-full flex items-center justify-center bg-muted">
+            <div className="p-8  bg-zinc-900 rounded-2xl w-full flex items-center justify-center bg-muted">
               <Loader />
             </div>
           )}
@@ -142,7 +142,7 @@ const TagsPage = () => {
               key={message.content}
               className={cn(
                 "p-8 w-full flex items-start gap-x-8 rounded-2xl",
-                message.role === "assistant" ? "bg-zinc-800 text-zinc-200 shadow-2xl shadow-zinc-950" : "bg-orange-900 text-zinc-200 shadow-2xl shadow-zinc-950",
+                message.role === "assistant" ? "bg-zinc-900 text-zinc-200 " : "bg-orange-900 text-zinc-200 ",
               )}
               >
                 {message.role === "assistant" ? <BotAvatar /> : <UserAvatar />}

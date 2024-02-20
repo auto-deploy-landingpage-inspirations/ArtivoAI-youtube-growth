@@ -26,7 +26,7 @@ const TermsPage = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-12 text-justify bg-zinc-800 shadow-2xl shadow-zinc-950 p-20 max-md:p-6 rounded-2xl text-zinc-400">
+      <div className="flex flex-col gap-12 text-justify bg-zinc-900  p-20 max-md:p-6 rounded-2xl text-zinc-400">
         <div className=" flex flex-col gap-3">
           <h1 className="text-xl font-semibold">Acceptance of Terms:</h1>
           <p className="text-sm font-light">

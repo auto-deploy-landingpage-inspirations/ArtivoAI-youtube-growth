@@ -7,7 +7,7 @@ import Link from "next/link";
 const ToolsPage = () => {
   return (
     <div className="flex flex-wrap max-md:flex-col gap-6 p-6">
-      <div className="bg-zinc-800  rounded-2xl p-6 shadow-2xl shadow-zinc-950">
+      <div className="bg-zinc-900  rounded-2xl p-6">
         <h1 className="text-zinc-300 text-2xl font-bold pb-6">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-rose-700">
             Script
@@ -23,7 +23,7 @@ const ToolsPage = () => {
           </Button>
         </Link>
       </div>
-      <div className="bg-zinc-800  rounded-2xl p-6 shadow-2xl shadow-zinc-950">
+      <div className="bg-zinc-900  rounded-2xl p-6">
         <h1 className="text-zinc-300 text-2xl font-bold pb-6">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700">
             Title
@@ -39,7 +39,7 @@ const ToolsPage = () => {
           </Button>
         </Link>
       </div>
-      <div className="bg-zinc-800  rounded-2xl p-6 shadow-2xl shadow-zinc-950">
+      <div className="bg-zinc-900  rounded-2xl p-6">
         <h1 className="text-zinc-300 text-2xl font-bold pb-6">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-700">
             Tags
@@ -55,7 +55,7 @@ const ToolsPage = () => {
           </Button>
         </Link>
       </div>
-      <div className="bg-zinc-800  rounded-2xl p-6 shadow-2xl shadow-zinc-950">
+      <div className="bg-zinc-900  rounded-2xl p-6">
         <h1 className="text-zinc-300 text-2xl font-bold pb-6">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-indigo-700">
             Description
@@ -71,7 +71,7 @@ const ToolsPage = () => {
           </Button>
         </Link>
       </div>
-      <div className="bg-zinc-800  rounded-2xl p-6 shadow-2xl shadow-zinc-950">
+      <div className="bg-zinc-900  rounded-2xl p-6">
         <h1 className="text-zinc-300 text-2xl font-bold pb-6">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-emerald-700">
             Music
@@ -87,7 +87,7 @@ const ToolsPage = () => {
           </Button>
         </Link>
       </div>
-      <div className="bg-zinc-800  rounded-2xl p-6 shadow-2xl shadow-zinc-950">
+      <div className="bg-zinc-900  rounded-2xl p-6">
         <h1 className="text-zinc-300 text-2xl font-bold pb-6">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-amber-700">
             Name

@@ -121,7 +121,7 @@ const CoachPage = () => {
                 )}
               />
               <Button
-                className="rounded-2xl bg-orange-900 hover:bg-zinc-900 col-span-12 lg:col-span-2 w-full"
+                className="rounded-2xl bg-orange-900 hover:bg-zinc-950 col-span-12 lg:col-span-2 w-full"
                 type="submit"
                 disabled={isLoading}
                 size="icon"
@@ -134,7 +134,7 @@ const CoachPage = () => {
 
         <div className="space-y-4 mt-4">
           {isLoading && (
-            <div className="p-8 bg-zinc-800 shadow-2xl shadow-zinc-950 rounded-2xl w-full flex items-center justify-center bg-muted">
+            <div className="p-8 bg-zinc-900 rounded-2xl w-full flex items-center justify-center bg-muted">
               <Loader />
             </div>
           )}
@@ -148,8 +148,8 @@ const CoachPage = () => {
                 className={cn(
                   "p-8 w-full flex items-start gap-x-8 rounded-2xl",
                   message.role === "assistant"
-                    ? "bg-zinc-800 text-zinc-200 shadow-2xl shadow-zinc-950"
-                    : "bg-orange-900 text-zinc-200 shadow-2xl shadow-zinc-950"
+                    ? "bg-zinc-900 text-zinc-200"
+                    : "bg-orange-900 text-zinc-200"
                 )}
               >
                 {message.role === "assistant" ? <BotAvatar /> : <UserAvatar />}

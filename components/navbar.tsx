@@ -33,7 +33,7 @@ const Navbar = async () => {
           <PopoverTrigger>
             <HelpCircle className="text-zinc-400 h-5 w-5 cursor-help" />
           </PopoverTrigger>
-          <PopoverContent className="bg-zinc-800 rounded-2xl border-0 text-zinc-200 w-auto">
+          <PopoverContent className="bg-zinc-900 rounded-2xl border-0 text-zinc-200 w-auto">
             <Link href={"/terms-of-service"}>
             <Button variant={"ghost"} className="rounded-2xl">
               Terms of Service

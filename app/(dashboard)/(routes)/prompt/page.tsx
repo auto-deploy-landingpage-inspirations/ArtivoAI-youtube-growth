@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 const ToolsPage = () => {
   return (
     <div className="flex max-md:flex-col gap-6 p-6">
-      <div className="bg-zinc-800  rounded-2xl p-6 shadow-2xl shadow-zinc-950">
+      <div className="bg-zinc-900  rounded-2xl p-6">
         <h1 className="text-zinc-400 text-xl font-bold pb-6">
           Prompts for AI Mentor
         </h1>
@@ -58,7 +58,7 @@ const ToolsPage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-zinc-800  rounded-2xl p-6 shadow-2xl shadow-zinc-950">
+      <div className="bg-zinc-900  rounded-2xl p-6">
         <h1 className="text-zinc-400 text-xl font-bold pb-6">
           Prompts for AI Tools
         </h1>
