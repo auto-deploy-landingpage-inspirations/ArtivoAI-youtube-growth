@@ -22,7 +22,7 @@ import { cn } from "@/lib/utils";
 
 const tools = [
     {
-      label: "AI Coach",
+      label: "AI Mentor",
       icon: Bot,
       color: "text-yellow-600",
       bgColor: "bg-yellow-900/10",
@@ -91,7 +91,7 @@ export const ProModal = () => {
 
   return (
     <Dialog open={proModal.isOpen} onOpenChange={proModal.onClose}>
-      <DialogContent className="bg-zinc-900 border-0">
+      <DialogContent className="bg-zinc-950 border-0">
         <DialogHeader>
           <DialogTitle className="flex justify-center items-center flex-col gap-y-4 pb-2">
             <div className="flex items-center text-zinc-200 gap-x-2 font-bold text-xl">
@@ -103,7 +103,7 @@ export const ProModal = () => {
           </DialogTitle>
           <DialogDescription className="text-center pt-2 space-y-2 text-zinc-200 font-medium">
             {tools.map((tool) => (
-              <Card key={tool.href} className="p-3 border-0 bg-zinc-800 text-zinc-200 flex items-center justify-between">
+              <Card key={tool.href} className="p-3 border-0 bg-zinc-900 text-zinc-200 flex items-center justify-between">
                 <div className="flex items-center gap-x-4">
                   <div className={cn("p-2 w-fit rounded-md", tool.bgColor)}>
                     <tool.icon className={cn("w-6 h-6", tool.color)} />
