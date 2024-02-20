@@ -10,7 +10,12 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { FcGoogle } from "react-icons/fc";
 import { PiInstagramLogoFill } from "react-icons/pi";
 import { Badge } from "@/components/ui/badge";
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 import {
   CheckCheck,
@@ -38,6 +43,7 @@ import {
   TextRevealCardTitle,
 } from "@/components/ui/text-reveal-card";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
+import { Separator } from "@/components/ui/separator";
 
 const items = [
   {
@@ -130,7 +136,7 @@ const LandingPage = () => {
   return (
     <div className="h-full w-full">
       {/* ------------------------------NAVBAR----------------------------------- */}
-      <nav className="w-full fixed z-10 px-[4vw] p-3 border-b border-zinc-900 bg-black/60 backdrop-blur-sm flex items-center justify-between">
+      <nav className="w-full fixed z-10 px-[4vw] p-3 border-b border-zinc-900 bg-zinc-900/50 backdrop-blur-sm flex items-center justify-between">
         <div className="flex items-center gap-20">
           <div
             onClick={() => scrolltoHash("top")}
@@ -189,41 +195,50 @@ const LandingPage = () => {
             <SheetTrigger className="md:hidden text-zinc-200">
               <Menu />
             </SheetTrigger>
-            <SheetContent className=" bg-zinc-950 border-l border-zinc-900 w-auto p-12">
+            <SheetContent className=" bg-zinc-950 border-l border-zinc-900 w-auto pt-12">
               <SheetClose className="flex flex-col items-center gap-4">
-              <div
-                onClick={() => scrolltoHash("faq")}
-                className="text-zinc-400 text-sm font-medium cursor-pointer  hover:text-zinc-200"
-              >
-                FAQ
-              </div>
-
-              <div
-                onClick={() => scrolltoHash("pricing")}
-                className="text-zinc-400 text-sm font-medium cursor-pointer hover:text-zinc-200"
-              >
-                Pricing
-              </div>
-
-              <Link target="_blank" href={"https://www.youtube.com/@ArtivoAI"}>
-                <PiYoutubeLogoFill className="text-zinc-400 h-5 w-5" />
-              </Link>
-              <Link target="_blank" href={"https://www.instagram.com/artivoai"}>
-                <PiInstagramLogoFill className="text-zinc-400 h-5 w-5" />
-              </Link>
-              <Link href={isSignedIn ? "/dashboard" : "/sign-in"}>
-                <Button
-                  variant={"ghost"}
-                  className="text-sm font-medium border-zinc-800 rounded-2xl"
+              
+                <div
+                  onClick={() => scrolltoHash("faq")}
+                  className="text-zinc-400 text-sm font-medium cursor-pointer  hover:text-zinc-200"
                 >
-                  Dashboard
-                </Button>
-              </Link>
-              <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
-                <Button variant="premium" className="text-sm rounded-2xl">
-                  GET STARTED
-                </Button>
-              </Link>
+                  FAQ
+                </div>
+                <Separator/>
+                <div
+                  onClick={() => scrolltoHash("pricing")}
+                  className="text-zinc-400 text-sm font-medium cursor-pointer hover:text-zinc-200"
+                >
+                  Pricing
+                </div>
+                <Separator/>
+
+                <Link
+                  target="_blank"
+                  href={"https://www.youtube.com/@ArtivoAI"}
+                >
+                  <PiYoutubeLogoFill className="text-zinc-400 h-5 w-5" />
+                </Link>
+                <Link
+                  target="_blank"
+                  href={"https://www.instagram.com/artivoai"}
+                >
+                  <PiInstagramLogoFill className="text-zinc-400 h-5 w-5" />
+                </Link>
+                <Separator/>
+                <Link href={isSignedIn ? "/dashboard" : "/sign-in"}>
+                  <Button
+                    variant={"ghost"}
+                    className="text-sm font-medium border-zinc-800 rounded-2xl"
+                  >
+                    Dashboard
+                  </Button>
+                </Link>
+                <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
+                  <Button variant="premium" className="text-sm rounded-2xl">
+                    GET STARTED
+                  </Button>
+                </Link>
               </SheetClose>
             </SheetContent>
           </Sheet>
@@ -232,7 +247,7 @@ const LandingPage = () => {
       {/* ----------------------------HERO SECTION------------------------------- */}
       <div
         id="top"
-        className="text-zinc-100 bg-black bg-grid-zinc-900/70 font-bold max-md:pt-28 pt-40 pb-20 px-[4vw] text-left flex shadow-2xl shadow-zinc-950"
+        className="text-zinc-100 bg-zinc-950 bg-grid-zinc-900/70 font-bold max-md:pt-28 pt-40 pb-20 px-[4vw] text-left flex shadow-2xl shadow-zinc-950"
       >
         <div className="space-y-12 max-lg:w-full w-[50vw]">
           <div className="space-y-5">
@@ -241,16 +256,13 @@ const LandingPage = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
                 YouTube
               </span>{" "}
-              <TypewriterComponent options={{
-              strings: [
-                "viewership.",
-                "videos.",
-                "scripts.",
-                "presence."
-              ],
-              autoStart: true,
-              loop: true,
-            }}/>
+              <TypewriterComponent
+                options={{
+                  strings: ["viewership.", "videos.", "scripts.", "presence."],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
             </h1>
             <h1 className="text-sm md:text-lg text-zinc-400 font-medium">
               Grab free tips and friendly advice to nurture your{" "}
@@ -308,7 +320,7 @@ const LandingPage = () => {
         </div>
       </div>
       {/* -------------------------------BENTO GRID---------------------------------- */}
-      <div className="bg-black pt-8 pb-4">
+      <div className="bg-zinc-950 pt-8 pb-4">
         <BentoGrid className="w-full px-[4vw] md:auto-rows-[20rem]">
           {items.map((item, i) => (
             <BentoGridItem
@@ -323,9 +335,9 @@ const LandingPage = () => {
         </BentoGrid>
       </div>
       {/* -------------------------------GRID------------------------------------ */}
-      <div className="space-y-4 bg-black px-[4vw] pb-8">
-        <div className="p-4 flex max-md:flex-col gap-6 bg-zinc-950 border border-zinc-900 rounded-2xl">
-          <div className="w-1/2 max-md:w-full border border-zinc-900 rounded-2xl">
+      <div className="gap-4 bg-zinc-950 px-[4vw] pb-8 flex max-md:flex-col">
+        <div className="p-4 w-1/2 max-md:w-full flex flex-col gap-6 bg-zinc-900 border border-zinc-800 rounded-2xl">
+          <div className=" max-md:w-full border border-zinc-900 rounded-2xl">
             <AspectRatio ratio={16 / 9}>
               <Image
                 fill
@@ -335,57 +347,62 @@ const LandingPage = () => {
               />
             </AspectRatio>
           </div>
-          <div className="flex flex-col gap-4 items-center justify-center w-1/2 max-md:w-full">
-            <div className="lg:text-2xl md:text-lg max-md:text-xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent text-center">
+          <div className="flex flex-col text-left gap-4 max-md:w-full">
+            <div className="lg:text-xl md:text-lg max-md:text-xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
               Optimize Your YouTube Visibility{" "}
-              <span className="lg:text-2xl md:text-lg max-md:text-xl font-bold text-zinc-100">
+              <span className="lg:text-xl md:text-lg max-md:text-xl font-bold text-zinc-100">
                 with AI
               </span>
             </div>
-            <p className=" max-lg:text-xs font-light text-center text-zinc-400">
+            <p className=" max-lg:text-xs lg:text-sm font-light text-zinc-400">
               Unlock effective keyword strategies, compelling titles, and
-              engaging descriptions <br className="max-md:hidden" /> to enhance
-              your views and attract more subscribers organically.
+              engaging descriptions to enhance your views and attract more
+              subscribers organically.
             </p>
             <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
-              <h1 className="text-indigo-400 font-bold text-center lg:pt-16 max-md:pt-8">
+              <Button
+                variant={"ghost"}
+                className="text-indigo-500 border-indigo-400 rounded-2xl font-bold"
+              >
                 Start Free Today.
-              </h1>
+              </Button>
             </Link>
           </div>
         </div>
-        <div>
-          <div className="p-4 flex max-md:flex-col gap-6 bg-zinc-950 border border-zinc-900 rounded-2xl">
-            <div className="flex flex-col justify-center items-center w-1/2 max-md:w-full">
-              <h1 className="text-xl md:text-lg lg:text-4xl font-bold text-zinc-100 gap-3 flex items-center">
-                Introducing
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
-                  AI Mentor
-                </span>
-                <Badge className="bg-gradient-to-r from-red-500 to-orange-500 border-0">
-                  NEW
-                </Badge>
-              </h1>
-              <p className="pt-6 text-xs lg:text-lg font-light text-zinc-400 text-center">
-                Access your round-the-clock AI Mentor
-                <br /> Gain insights and support whenever you need.
-              </p>
-              <Link href={isSignedIn ? "/mentor" : "/sign-up"}>
-                <h1 className="text-red-500 text-center font-bold pt-12">
-                  Start Chatting Now.
-                </h1>
-              </Link>
-            </div>
-            <div className="w-1/2 max-md:w-full border border-zinc-900 rounded-2xl">
-              <AspectRatio ratio={16 / 9}>
-                <Image
-                  fill
-                  alt="image"
-                  src="/mentor.png"
-                  className="rounded-2xl max-md:rounded-lg"
-                />
-              </AspectRatio>
-            </div>
+
+        <div className="p-4 w-1/2 max-md:w-full flex flex-col gap-6 bg-zinc-900 border border-zinc-800 rounded-2xl">
+          <div className=" max-md:w-full border border-zinc-900 rounded-2xl">
+            <AspectRatio ratio={16 / 9}>
+              <Image
+                fill
+                alt="image"
+                src="/mentor.png"
+                className="rounded-2xl max-md:rounded-lg"
+              />
+            </AspectRatio>
+          </div>
+          <div className="flex flex-col gap-4 text-left max-md:w-full">
+            <h1 className="text-xl md:text-lg lg:text-xl font-bold text-zinc-100 gap-3 flex">
+              Introducing
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
+                AI Mentor
+              </span>
+              <Badge className="bg-gradient-to-r from-red-500 to-orange-500 border-0">
+                NEW
+              </Badge>
+            </h1>
+            <p className="text-xs lg:text-sm font-light text-zinc-400">
+              Access your round-the-clock AI Mentor Gain insights and support
+              whenever you need.
+            </p>
+            <Link href={isSignedIn ? "/mentor" : "/sign-up"}>
+              <Button
+                variant={"ghost"}
+                className="text-red-500 rounded-2xl border-red-400 font-bold"
+              >
+                Start Chatting Now.
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -393,7 +410,7 @@ const LandingPage = () => {
       {/* -------------------------------FAQ BOX------------------------------------ */}
       <div
         id="faq"
-        className="border-y border-zinc-900 bg-black bg-grid-zinc-900/70 flex flex-col space-y-14 justify-center items-center pt-12 pb-12 min-[1440px]:pt-32 min-[1440px]:pb-32 lg:pt-28 lg:pb-28 md:pt-16 md:pb-16"
+        className="border-y border-zinc-900 bg-zinc-950 bg-grid-zinc-900/70 flex flex-col space-y-14 justify-center items-center pt-12 pb-12 min-[1440px]:pt-32 min-[1440px]:pb-32 lg:pt-28 lg:pb-28 md:pt-16 md:pb-16"
       >
         <h1 className="font-bold px-[4vw] text-zinc-100 text-center text-3xl min-[1440px]:text-6xl lg:text-5xl md:text-4xl">
           Frequently Asked{" "}
@@ -401,7 +418,7 @@ const LandingPage = () => {
             Questions
           </span>
         </h1>
-        <div className="bg-zinc-950 border border-zinc-900 min-[1440px]:w-8/12 lg:w-11/12 md:w-9/12 w-11/12 p-10 rounded-2xl">
+        <div className="bg-zinc-900 border border-zinc-800 min-[1440px]:w-8/12 lg:w-11/12 md:w-9/12 w-11/12 p-10 rounded-2xl">
           <Accordion type="single" collapsible className="text-zinc-100">
             <AccordionItem value="item-1">
               <AccordionTrigger>
@@ -504,12 +521,12 @@ const LandingPage = () => {
         </div>
       </div>
       {/* --------------------------------PRICING BOX------------------------------- */}
-      <div id="pricing" className="bg-black lg:p-28 md:p-16 p-6">
+      <div id="pricing" className="bg-zinc-950 lg:p-28 md:p-16 p-6">
         <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-cyan-500 min-[1440px]:text-6xl md:text-4xl lg:text-5xl text-3xl pt-8 pb-4 font-bold">
           Pricing
         </h1>
         <div className="flex justify-center sm:space-x-4 max-sm:space-y-4 max-sm:flex-col">
-          <div className=" text-zinc-100 text-center mt-14 rounded-2xl bg-gradient-to-b from-zinc-950 to-black p-10 w-auto">
+          <div className=" text-zinc-100 text-center mt-14 rounded-2xl bg-gradient-to-b from-zinc-900 to-zinc-950 p-10 w-auto">
             <div className="font-bold min-[1440px]:text-3xl lg:text-2xl md:text-xl text-lg">
               Free Plan
             </div>
@@ -545,7 +562,7 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
-          <div className=" text-zinc-100 text-center mt-14 rounded-2xl bg-gradient-to-b from-zinc-950 to-black p-10 w-auto">
+          <div className=" text-zinc-100 text-center mt-14 rounded-2xl bg-gradient-to-b from-zinc-900 to-zinc-950 p-10 w-auto">
             <div className="font-bold min-[1440px]:text-3xl lg:text-2xl md:text-xl text-lg text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-cyan-500">
               Pro Plan
             </div>
@@ -609,7 +626,7 @@ const LandingPage = () => {
         </div>
       </div>
       {/* ---------------------------------LAST BLOCK------------------------------ */}
-      <div className="text-center bg-black space-y-10 p-6 pt-24 pb-24">
+      <div className="text-center bg-zinc-950 space-y-10 p-6 pt-24 pb-24">
         <div className="relative min-[1440px]:h-32 lg:h-28 min-[1440px]:w-32 lg:w-28 h-24 w-24 flex justify-center mx-auto">
           <Image fill alt="Logo" src="/logo.png" />
         </div>
@@ -637,7 +654,7 @@ const LandingPage = () => {
       </div>
       {/* -----------------------------------FOOTER-------------------------------- */}
       <div>
-        <div className="px-[4vw] flex max-md:flex-col max-md:items-center max-md:gap-2 justify-between bg-zinc-950 border-t border-zinc-900 p-6">
+        <div className="px-[4vw] flex max-md:flex-col max-md:items-center max-md:gap-2 justify-between bg-zinc-900 border-t border-zinc-800 p-6">
           <div className="text-zinc-300 font-bold lg:text-sm text-xs">
             © 2024 ArtivoAI. All rights reserved.
           </div>
