@@ -5,6 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import Favicon from "/public/favicon.ico";
 import { ModalProvider } from "@/components/modal-provider";
 import { ToasterProvider } from "@/components/toaster-provider";
+import { dark } from '@clerk/themes';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +21,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+    appearance={{
+      baseTheme: dark
+    }}
+    >
       <html lang="en">
         <body className={inter.className}>
           <ModalProvider />
