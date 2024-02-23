@@ -46,7 +46,7 @@ export async function GET() {
               name: "ArtivoAI Pro",
               description: "Unlimited AI Generations"
             },
-            unit_amount: 16594,
+            unit_amount: 19900,
             recurring: {
               interval: "month"
             }

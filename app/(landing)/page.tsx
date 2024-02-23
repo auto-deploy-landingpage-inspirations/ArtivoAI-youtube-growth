@@ -136,7 +136,7 @@ const LandingPage = () => {
   return (
     <div className="h-full w-full">
       {/* ------------------------------NAVBAR----------------------------------- */}
-      <nav className="w-full fixed z-10 px-[4vw] p-3 border-b border-zinc-900 bg-zinc-900/50 backdrop-blur-sm flex items-center justify-between">
+      <nav className="w-full fixed z-10 px-[4vw] p-3 border-b border-zinc-800 bg-zinc-900/80 backdrop-blur-sm flex items-center justify-between">
         <div className="flex items-center gap-20">
           <div
             onClick={() => scrolltoHash("top")}
@@ -534,7 +534,7 @@ const LandingPage = () => {
               For newbies
             </div>
             <div className="min-[1440px]:text-6xl md:text-5xl text-4xl my-5 font-bold">
-              $0{" "}
+            &#8377;0{" "}
             </div>
             <div className="text-zinc-500 font-semibold lg:text-sm text-xs">
               Per Month
@@ -571,12 +571,10 @@ const LandingPage = () => {
             </div>
             <div className="min-[1440px]:text-6xl md:text-5xl text-4xl max-lg:flex max-lg:flex-col max-lg:gap-3 my-5 font-bold">
               <span className="text-xl md:text-2xl font-bold line-through decoration-red-500">
-                $5
+              &#8377;450
               </span>{" "}
-              $2{" "}
-              <span className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-cyan-500">
-                ( 165.94 INR )
-              </span>
+              &#8377;199{" "}
+              
             </div>
             <div className="text-zinc-500 font-semibold lg:text-sm text-xs">
               Per Month
