@@ -21,7 +21,7 @@ const DashboardPage = () => {
   return (
     <div className="flex flex-col gap-6 font-bold p-6">
       <div className="flex max-md:flex-col gap-6">
-        <div className="bg-zinc-900  rounded-2xl p-6 shadow-2xl shadow-orange-950">
+        <div className="bg-zinc-800  rounded-2xl p-6 shadow-2xl shadow-orange-950">
           <h1 className="text-zinc-300 text-2xl font-bold pb-6">
             Chat with your{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
@@ -37,7 +37,7 @@ const DashboardPage = () => {
             </Button>
           </Link>
         </div>
-        <div className="bg-zinc-900  rounded-2xl p-6">
+        <div className="bg-zinc-800  rounded-2xl p-6">
           <h1 className="text-zinc-300 text-xl font-bold pb-6">
             Check our Prompt Library.
           </h1>
@@ -50,7 +50,7 @@ const DashboardPage = () => {
             </Button>
           </Link>
         </div>
-        <div className="bg-zinc-900  rounded-2xl p-6 shadow-2xl shadow-purple-950">
+        <div className="bg-zinc-800  rounded-2xl p-6 shadow-2xl shadow-purple-950">
           <h1 className="text-zinc-300 text-xl font-bold pb-6">
             Brainstorm exciting{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500">
@@ -69,7 +69,7 @@ const DashboardPage = () => {
           </Link>
         </div>
       </div>
-      <div className="bg-zinc-900 rounded-2xl p-6">
+      <div className="bg-zinc-800 rounded-2xl p-6">
         <h1 className="text-zinc-300 max-md:text-center text-2xl font-bold pb-6">
           AI Tools
         </h1>
