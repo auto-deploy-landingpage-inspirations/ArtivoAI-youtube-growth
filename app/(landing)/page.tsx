@@ -11,17 +11,16 @@ import LandingFooter from "@/components/LandingFooter";
 
 const LandingPage = () => {
   return (
-    <div className="w-full">
+    <div className="w-full overflow-hidden">
       <LandingNavbar />
       <LandingHero />
       <LandingMarquee />
       <LandingAbout />
       <LandingTools />
-      <LandingFaq />
       <LandingPricing />
+      <LandingFaq />
       <LandingLastBlock />
       <LandingFooter />
-      
     </div>
   );
 };

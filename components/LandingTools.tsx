@@ -12,7 +12,7 @@ const LandingTools = () => {
       <h1 className="text-5xl px-[4vw] font-semibold text-zinc-100">AI Tools</h1>
       <div className="border-t border-zinc-800 mt-12">
       <div className="gap-4 px-[4vw] mt-12 flex max-md:flex-col">
-        <div className="p-4 w-1/2 max-md:w-full flex flex-col gap-6 bg-zinc-800 border border-red-500 rounded-2xl">
+        <div className="p-4 w-1/2 max-md:w-full flex flex-col gap-6 bg-zinc-800 border-0 rounded-2xl">
           <div className=" max-md:w-full border border-zinc-900 rounded-2xl overflow-hidden">
             <AspectRatio ratio={16 / 9}>
               <Image
@@ -43,7 +43,7 @@ const LandingTools = () => {
           </div>
         </div>
 
-        <div className="p-4 w-1/2 max-md:w-full flex flex-col gap-6 bg-zinc-800 border border-red-500 rounded-2xl">
+        <div className="p-4 w-1/2 max-md:w-full flex flex-col gap-6 bg-zinc-800 border-0 rounded-2xl">
           <div className=" max-md:w-full border border-zinc-900 rounded-2xl overflow-hidden">
             <AspectRatio ratio={16 / 9}>
               <Image

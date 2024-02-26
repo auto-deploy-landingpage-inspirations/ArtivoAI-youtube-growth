@@ -1,19 +1,19 @@
 import Image from "next/image";
 import { AspectRatio } from "./ui/aspect-ratio";
-import { Clipboard, File, FileSignature, Table } from "lucide-react";
+import { BrainCircuit, Clipboard, File, FileHeart, FileSignature, MessageSquareDot, Speech, Table } from "lucide-react";
 import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 
 const Skeleton1 = () => (
-  <div className="flex justify-center items-center w-full h-full min-h-[6rem] rounded-xl border-0 bg-indigo-500">AI Content Generation</div>
+  <div className="flex justify-center items-center w-full h-full min-h-[6rem] rounded-xl border-0 bg-indigo-500"><BrainCircuit className="h-12 w-12" /></div>
 );
 const Skeleton2 = () => (
-  <div className="flex justify-center items-center w-full h-full min-h-[6rem] rounded-xl border-0 bg-yellow-500">Contextual Suggestions</div>
+  <div className="flex justify-center items-center w-full h-full min-h-[6rem] rounded-xl border-0 bg-yellow-500"><MessageSquareDot className="h-12 w-12" /></div>
 );
 const Skeleton3 = () => (
-  <div className="flex justify-center items-center w-full h-full min-h-[6rem] rounded-xl border-0 bg-amber-500">The Art of AI</div>
+  <div className="flex justify-center items-center w-full h-full min-h-[6rem] rounded-xl border-0 bg-amber-500"><FileHeart className="h-12 w-12" /></div>
 );
 const Skeleton4 = () => (
-  <div className="flex justify-center items-center w-full h-full min-h-[6rem] rounded-xl border-0 bg-pink-500">The Power of Communication</div>
+  <div className="flex justify-center items-center w-full h-full min-h-[6rem] rounded-xl border-0 bg-pink-500"><Speech className="h-12 w-12"/></div>
 );
 const items = [
   {
@@ -52,10 +52,10 @@ const LandingAbout = () => {
   return (
     <div id="about" className="w-full text-zinc-100 py-20">
       <h1 className="text-5xl font-light px-[4vw]">
-        Unlock effortless <span className="text-red-500">YouTube growth</span>{" "}
-        with ArtivoAI. Access the strategies and talent powering the biggest
-        creators and achieve your YouTube goals,{" "}
-        <span className="text-red-500">faster.</span>
+        Unlock effortless <span className="underline decoration-sky-500">YouTube growth</span>{" "}
+        with <span className="underline decoration-red-500">ArtivoAI</span>. Access the strategies and talent powering the biggest
+        creators and <span className="underline decoration-yellow-500">achieve</span> your YouTube goals,{" "}
+        <span className="underline decoration-indigo-500">faster.</span>
       </h1>
       <div className="mt-12 pt-12 border-t border-zinc-800">
         <BentoGrid className="px-[4vw] md:auto-rows-[20rem]">

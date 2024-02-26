@@ -8,7 +8,7 @@ const LandingFaq = () => {
             Frequently Asked Questions
         </div>
         <div className="border-t border-zinc-800 mt-12 px-[4vw] flex items-center">
-        <div className="bg-zinc-800 border border-red-500 w-full p-10 mt-12 rounded-2xl">
+        <div className="bg-zinc-800 border-0 w-full p-10 mt-12 rounded-2xl">
           <Accordion type="single" collapsible className="text-zinc-100">
             <AccordionItem value="item-1">
               <AccordionTrigger>

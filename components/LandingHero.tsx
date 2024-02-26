@@ -16,7 +16,8 @@ const LandingHero = () => {
         <div className="space-y-5 px-[4vw]">
           <h1 className="text-4xl md:text-4xl lg:text-5xl min-[1440px]:text-7xl font-extrabold uppercase">
             Crafted to enhance
-            <br />your{" "}
+            <br />
+            your{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-500">
               YouTube
             </span>{" "}
@@ -35,31 +36,28 @@ const LandingHero = () => {
           </h1>
         </div>
         <div className="h-[20vh] w-[4vw] max-md:w-[10vw] bg-red-500 absolute inset-y-0 right-0 flex flex-col gap-4 justify-center items-center rounded-l-xl">
-            <Link href={"/"}>
-              <Twitter/>
-            </Link>
-            <Link href={"/"}>
-              <Instagram/>
-            </Link>
-            <Link href={"/"}>
-              <Youtube/>
-            </Link>
+          <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
+            <div className="rotate-90 text-nowrap font-semibold text-xl">
+              Get Started
+            </div>
+          </Link>
         </div>
         <div className="border-t border-zinc-800 mt-40 max-md:mt-28 flex max-md:flex-col max-md:gap-4 justify-between items-center px-[4vw] py-5 font-medium text-zinc-200">
-            <h1>Create content using AI 10x faster.</h1>
-            <h1>No credit card required.</h1>
-            <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
-                <Button
-                  variant="ghost"
-                  className="md:text-base rounded-2xl font-bold"
-                >
-                  <FcGoogle className="mr-3 h-7 w-7 bg-zinc-900 rounded-full" /> Sign up with your Google
-                  account
-                </Button>
-              </Link>
+          <h1>Create content using AI 10x faster.</h1>
+          <h1>No credit card required.</h1>
+          <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
+            <Button
+              variant="ghost"
+              className="md:text-base rounded-2xl font-bold"
+            >
+              <FcGoogle className="mr-3 h-7 w-7 bg-zinc-900 rounded-full" />{" "}
+              Sign up with your Google account
+            </Button>
+          </Link>
         </div>
-        <div className="flex justify-center items-center text-zinc-700 mt-4">Scroll down</div>
-
+        <div className="flex justify-center items-center text-zinc-700 mt-4">
+          Scroll down
+        </div>
 
         {/* <div className="space-y-5">
             <div className="text-sm md:text-base font-medium text-zinc-500">

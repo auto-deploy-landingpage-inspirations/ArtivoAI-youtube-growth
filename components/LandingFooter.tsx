@@ -1,6 +1,6 @@
 const LandingFooter = () => {
   return (
-    <div id="footer" className="w-full bg-red-500">
+    <div id="footer" className="w-full bg-red-500 rounded-t-2xl">
       <div className="px-[4vw] w-full flex max-md:flex-col max-md:text-center gap-8 justify-between py-12">
       <div className="text-zinc-900 tracking-tighter font-semibold text-sm flex flex-col gap-4">
             <h1 className="text-3xl font-extrabold">Contact Us</h1>

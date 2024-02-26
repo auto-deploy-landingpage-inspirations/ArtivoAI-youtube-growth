@@ -66,7 +66,7 @@ const LandingNavbar = () => {
         <Link href={isSignedIn ? "/dashboard" : "/sign-in"}>
           <Button
             variant={"ghost"}
-            className="text-sm font-medium border-zinc-800 rounded-2xl max-md:hidden ml-32"
+            className="text-sm font-medium border-zinc-800 rounded-2xl max-md:hidden ml-12"
           >
             Dashboard
           </Button>
