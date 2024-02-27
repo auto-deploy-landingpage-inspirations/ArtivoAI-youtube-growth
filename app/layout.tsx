@@ -10,7 +10,7 @@ import { dark } from '@clerk/themes';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ArtivoAI | AI Platform for content creators",
+  title: "Canvas of Smart Creations - artivoAI",
   description: "AI Platform for content creators",
   icons: [{ rel: "icon", url: Favicon.src }],
 };

@@ -1,16 +1,15 @@
 "use client";
+import ContactPageComponent from "@/components/ContactPage";
 import LandingFooter from "@/components/LandingFooter";
-import LandingPricing from "@/components/LandingPricing";
 import SimpleNavbar from "@/components/SimpleNavbar";
 
-const PricingPage = () => {
-    return (
-        <div className="w-full overflow-hidden">
+const ContactPage =()=>{
+    return(
+        <div className="w-full">
             <SimpleNavbar/>
-            <LandingPricing/>
+            <ContactPageComponent/>
             <LandingFooter/>
         </div>
     )
 };
-
-export default PricingPage;
+export default ContactPage;

@@ -53,7 +53,7 @@ const LandingAbout = () => {
     <div id="about" className="w-full text-zinc-100 py-20">
       <h1 className="text-5xl font-light px-[4vw]">
         Unlock effortless <span className="underline decoration-sky-500">YouTube growth</span>{" "}
-        with <span className="underline decoration-red-500">ArtivoAI</span>. Access the strategies and talent powering the biggest
+        with <span className="underline decoration-red-500">artivoAI</span>. Access the strategies and talent powering the biggest
         creators and <span className="underline decoration-yellow-500">achieve</span> your YouTube goals,{" "}
         <span className="underline decoration-indigo-500">faster.</span>
       </h1>

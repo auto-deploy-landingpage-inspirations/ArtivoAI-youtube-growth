@@ -35,9 +35,9 @@ const LandingHero = () => {
             smile.
           </h1>
         </div>
-        <div className="h-[20vh] w-[4vw] max-md:w-[10vw] bg-red-500 absolute inset-y-0 right-0 flex flex-col gap-4 justify-center items-center rounded-l-xl">
+        <div className="h-[20vh] w-[4vw] max-md:hidden bg-red-500 absolute inset-y-0 right-0 flex flex-col gap-4 justify-center items-center rounded-l-xl">
           <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
-            <div className="rotate-90 text-nowrap font-semibold text-xl">
+            <div className="rotate-90 text-nowrap font-semibold text-xl max-md:text-lg">
               Get Started
             </div>
           </Link>

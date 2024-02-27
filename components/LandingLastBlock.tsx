@@ -12,7 +12,7 @@ const LandingLastBlock = () => {
         <h1 className="font-bold text-zinc-100 min-[1440px]:text-7xl lg:text-4xl text-3xl">
           Revitalize Your YouTube <br /> Presence Now
         </h1>
-        <h1 className="min-[1440px]:text-lg md:text-sm text-xs text-zinc-400 font-light">
+        <h1 className="min-[1440px]:text-lg text-sm text-zinc-400 font-light">
           Become part of the thriving community leveraging ArtivoAI for channel
           <br className="max-md:hidden" />
           expansion Connect with the multitude of content creators utilizing

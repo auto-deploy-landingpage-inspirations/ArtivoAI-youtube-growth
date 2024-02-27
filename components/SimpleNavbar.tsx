@@ -2,26 +2,19 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from "./ui/sheet";
-import { Menu } from "lucide-react";
-import { Separator } from "./ui/separator";
 import { useAuth } from "@clerk/nextjs";
 
-const PricingNavbar = () => {
+const SimpleNavbar = () => {
   const { isSignedIn } = useAuth();
-  const scrolltoHash = function (element_id: string) {
-    const element = document.getElementById(element_id);
-    element?.scrollIntoView({ behavior: "smooth", inline: "nearest" });
-  };
   return (
     <nav className="w-full fixed z-10 px-[4vw] py-3 backdrop-blur-sm flex items-center justify-between">
       <Link href={"/"}>
         <div className="flex items-center cursor-pointer">
-          <div className="relative h-7 w-7 mr-4">
+          {/* <div className="relative h-7 w-7 mr-4">
             <Image fill alt="Logo" src="/logo.png" />
-          </div>
-          <h1 className={cn("text-2xl max-md:text-xl font-light text-white")}>
-            Artivo<span className="font-bold">AI</span>
+          </div> */}
+          <h1 className={cn("text-2xl font-bold text-white")}>
+            artivo<span className="font-bold text-red-500">AI.</span>
           </h1>
         </div>
       </Link>
@@ -51,4 +44,4 @@ const PricingNavbar = () => {
   );
 };
 
-export default PricingNavbar;
+export default SimpleNavbar;

@@ -19,11 +19,11 @@ const LandingNavbar = () => {
         onClick={() => scrolltoHash("top")}
         className="flex items-center cursor-pointer"
       >
-        <div className="relative h-7 w-7 mr-4">
+        {/* <div className="relative h-7 w-7 mr-4">
           <Image fill alt="Logo" src="/logo.png" />
-        </div>
-        <h1 className={cn("text-2xl max-md:text-xl font-light text-white")}>
-          Artivo<span className="font-bold">AI</span>
+        </div> */}
+        <h1 className={cn("text-2xl font-bold text-white")}>
+          artivo<span className="font-bold text-red-500">AI.</span>
         </h1>
       </div>
 
@@ -54,13 +54,6 @@ const LandingNavbar = () => {
             Pricing
           </div>
           </Link>
-
-          <div
-            onClick={() => scrolltoHash("footer")}
-            className="text-sm cursor-pointer hover:text-red-500"
-          >
-            Contact Us
-          </div>
         </div>
 
         <Link href={isSignedIn ? "/dashboard" : "/sign-in"}>
@@ -111,14 +104,6 @@ const LandingNavbar = () => {
                 Pricing
               </div>
               </Link>
-              <Separator />
-
-              <div
-                onClick={() => scrolltoHash("footer")}
-                className="text-sm cursor-pointer hover:text-red-500"
-              >
-                Contact Us
-              </div>
               <Separator />
               <Link href={isSignedIn ? "/dashboard" : "/sign-in"}>
                 <Button
