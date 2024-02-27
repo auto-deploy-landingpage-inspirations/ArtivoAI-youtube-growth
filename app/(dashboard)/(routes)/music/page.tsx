@@ -85,7 +85,7 @@ const MusicPage = () => {
               className="
                 rounded-2xl 
                 
-                bg-zinc-900 
+                bg-zinc-800 
                 w-full 
                 p-4 
                 px-3 
@@ -99,7 +99,7 @@ const MusicPage = () => {
                 name="prompt"
                 render={({ field }) => (
                   <FormItem className="col-span-12 lg:col-span-10">
-                    <FormControl className="m-0 pl-2 rounded-2xl bg-zinc-900 text-zinc-100">
+                    <FormControl className="m-0 pl-2 rounded-2xl bg-zinc-800 text-zinc-100">
                       <Input
                         className=" border-0  outline-none placeholder:text-zinc-500"
                         disabled={isLoading} 
@@ -110,7 +110,7 @@ const MusicPage = () => {
                   </FormItem>
                 )}
               />
-              <Button className="bg-emerald-900 rounded-2xl hover:bg-zinc-950 col-span-12 lg:col-span-2 w-full" type="submit" disabled={isLoading} size="icon">
+              <Button className="bg-emerald-900 rounded-2xl hover:bg-zinc-900 col-span-12 lg:col-span-2 w-full" type="submit" disabled={isLoading} size="icon">
                 Generate
               </Button>
             </form>
@@ -119,7 +119,7 @@ const MusicPage = () => {
 
         <div className="space-y-4 mt-4">
           {isLoading && (
-            <div className="p-8  bg-zinc-900 rounded-2xl w-full flex items-center justify-center bg-muted">
+            <div className="p-8  bg-zinc-800 rounded-2xl w-full flex items-center justify-center bg-muted">
               <Loader />
             </div>
           )}

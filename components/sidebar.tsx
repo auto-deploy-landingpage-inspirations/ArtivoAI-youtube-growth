@@ -68,10 +68,8 @@ const Sidebar = ({
     <div className="space-y-4 md:rounded-2xl py-4 flex flex-col justify-between max-md:h-dvh h-screen md:h-[95vh] bg-zinc-800 text-zinc-200 ">
       <div className="px-3 py-2 md:flex-1">
         <Link href="/dashboard" className="flex items-center pl-3 mb-10">
-          <div className="relative w-8 h-8 mr-4">
-            <Image fill alt="logo" src="/logo.png" />
-          </div>
-          <h1 className="text-2xl font-bold">ArtivoAI</h1>
+          
+          <h1 className="text-2xl font-bold">artivo<span className="font-bold text-red-500">AI.</span></h1>
         </Link>
         <div className="space-y-2">
           {routes.map((route) => (

@@ -2,7 +2,7 @@
 
 import axios from "axios";
 import { useState } from "react";
-import { Bot, Check, Hash, ListVideo, MessageSquare, Music, Tv2, YoutubeIcon, Zap } from "lucide-react";
+import { Bot, Check, Hash, Lightbulb, ListVideo, Music, ScrollText, Tv2, WholeWord, Zap } from "lucide-react";
 import { toast } from "react-hot-toast";
 
 import { 
@@ -24,20 +24,27 @@ const tools = [
     {
       label: "AI Mentor",
       icon: Bot,
-      color: "text-yellow-600",
-      bgColor: "bg-yellow-900/10",
+      color: "text-orange-600",
+      bgColor: "bg-orange-900/10",
+      href: "/coach",
+    },
+    {
+      label: "Content Ideas Generator",
+      icon: Lightbulb,
+      color: "text-purple-600",
+      bgColor: "bg-purple-900/10",
       href: "/coach",
     },
     {
       label: "Script Generator",
-      icon: MessageSquare,
+      icon: ScrollText,
       color: "text-rose-600",
       bgColor: "bg-rose-900/10",
       href: "/conversation",
     },
     {
-      label: "Youtube Title Generator",
-      icon: YoutubeIcon,
+      label: "Title Generator",
+      icon: Tv2,
       color: "text-red-600",
       bgColor: "bg-red-900/10",
       href: "/title",
@@ -58,7 +65,7 @@ const tools = [
     },
     {
       label: "Channel Name Generator",
-      icon: Tv2,
+      icon: WholeWord,
       color: "text-amber-600",
       bgColor: "bg-amber-900/10",
       href: "/name",
@@ -91,7 +98,7 @@ export const ProModal = () => {
 
   return (
     <Dialog open={proModal.isOpen} onOpenChange={proModal.onClose}>
-      <DialogContent className="bg-zinc-950 border-0">
+      <DialogContent className="bg-zinc-900 border-0">
         <DialogHeader>
           <DialogTitle className="flex justify-center items-center flex-col gap-y-4 pb-2">
             <div className="flex items-center text-zinc-200 gap-x-2 font-bold text-xl">
@@ -103,7 +110,7 @@ export const ProModal = () => {
           </DialogTitle>
           <DialogDescription className="text-center pt-2 space-y-2 text-zinc-200 font-medium">
             {tools.map((tool) => (
-              <Card key={tool.href} className="p-3 border-0 bg-zinc-900 text-zinc-200 flex items-center justify-between">
+              <Card key={tool.href} className="p-3 border-0 bg-zinc-800 text-zinc-200 flex items-center justify-between">
                 <div className="flex items-center gap-x-4">
                   <div className={cn("p-2 w-fit rounded-md", tool.bgColor)}>
                     <tool.icon className={cn("w-6 h-6", tool.color)} />

@@ -6,12 +6,24 @@ import { Badge } from "./ui/badge";
 import { useAuth } from "@clerk/nextjs";
 
 const LandingTools = () => {
-    const { isSignedIn } = useAuth();
+  const { isSignedIn } = useAuth();
   return (
     <div id="tools" className="w-full py-20">
-      <h1 className="text-5xl px-[4vw] font-semibold text-zinc-100">AI Tools</h1>
-      <div className="border-t border-zinc-800 mt-12">
-      <div className="gap-4 px-[4vw] mt-12 flex max-md:flex-col">
+      <h1 className="text-5xl px-[4vw] font-light text-zinc-100">
+        AI Empowerment Suite:{" "}
+        <span className="underline decoration-red-500 font-semibold">
+          Elevate
+        </span>{" "}
+        Your YouTube Presence with{" "}
+        <span className="underline decoration-purple-500 font-semibold">
+          Intelligent Tools
+        </span>{" "}
+        for Unmatched{" "}
+        <span className="underline decoration-yellow-500 font-semibold">
+          Content Creation and Optimization.
+        </span>
+      </h1>
+      <div className="border-t border-zinc-800 mt-12 pt-12 gap-4 px-[4vw] flex max-md:flex-col">
         <div className="p-4 w-1/2 max-md:w-full flex flex-col gap-6 bg-zinc-800 border-0 rounded-2xl">
           <div className=" max-md:w-full border border-zinc-900 rounded-2xl overflow-hidden">
             <AspectRatio ratio={16 / 9}>
@@ -25,21 +37,17 @@ const LandingTools = () => {
           </div>
           <div className="flex flex-col text-left gap-4 max-md:w-full">
             <div className="lg:text-xl md:text-lg max-md:text-xl font-extrabold bg-zinc-100 bg-clip-text text-transparent">
-              Optimize Your YouTube Visibility with AI
+              Unleashing Creativity with AI-Driven Script Writing Excellence
             </div>
-            <p className=" max-lg:text-xs lg:text-sm font-bold text-zinc-100">
-              Unlock effective keyword strategies, compelling titles, and
-              engaging descriptions to enhance your views and attract more
-              subscribers organically.
+            <p className=" max-lg:text-xs lg:text-sm font-bold text-zinc-400">
+              Experience the future of scriptwriting with artivoAI, your
+              indispensable ally in crafting compelling narratives effortlessly.
+              Elevate your storytelling game as our cutting-edge AI tool assists
+              you in generating dynamic scripts, ensuring a seamless blend of
+              creativity and efficiency. Unleash the power of innovation and
+              transform your ideas into captivating stories with artivoAI –
+              where your vision meets the brilliance of artificial intelligence.
             </p>
-            <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
-              <Button
-                variant={"ghost"}
-                className="text-zinc-100 border-red-500 rounded-2xl font-bold"
-              >
-                Start Free Today.
-              </Button>
-            </Link>
           </div>
         </div>
 
@@ -64,9 +72,9 @@ const LandingTools = () => {
                 NEW
               </Badge>
             </h1>
-            <p className="text-xs lg:text-sm font-bold text-zinc-100">
-              Access your round-the-clock AI Mentor Gain insights and support
-              whenever you need.
+            <p className="text-xs lg:text-sm font-bold text-zinc-400">
+              Unlock 24/7 Guidance from Your AI Mentor: Elevate Your Insights
+              and Support Whenever You Need it Most.
             </p>
             <Link href={isSignedIn ? "/mentor" : "/sign-up"}>
               <Button
@@ -79,6 +87,58 @@ const LandingTools = () => {
           </div>
         </div>
       </div>
+      <div className="pt-4 gap-4 px-[4vw] flex max-md:flex-col">
+        <div className="p-4 w-1/2 max-md:w-full flex flex-col gap-6 bg-zinc-800 border-0 rounded-2xl">
+          <div className=" max-md:w-full border border-zinc-900 rounded-2xl overflow-hidden">
+            <AspectRatio ratio={16 / 9}>
+              <Image
+                fill
+                alt="image"
+                src="/dashboard.png"
+                className="rounded-2xl max-md:rounded-lg"
+              />
+            </AspectRatio>
+          </div>
+          <div className="flex flex-col text-left gap-4 max-md:w-full">
+            <div className="lg:text-xl md:text-lg max-md:text-xl font-extrabold bg-zinc-100 bg-clip-text text-transparent">
+              Unleash the Power of AI for Captivating and SEO-Optimized Video
+              Titles
+            </div>
+            <p className=" max-lg:text-xs lg:text-sm font-bold text-zinc-400">
+              Our cutting-edge AI tool designed to effortlessly generate
+              compelling and search-friendly titles. Save time, boost
+              discoverability, and captivate your audience with titles that
+              stand out in the competitive world of YouTube. Let AI innovation
+              transform your video strategy, making every title a masterpiece.
+            </p>
+          </div>
+        </div>
+
+        <div className="p-4 w-1/2 max-md:w-full flex flex-col gap-6 bg-zinc-800 border-0 rounded-2xl">
+          <div className=" max-md:w-full border border-zinc-900 rounded-2xl overflow-hidden">
+            <AspectRatio ratio={16 / 9}>
+              <Image
+                fill
+                alt="image"
+                src="/mentor.png"
+                className="rounded-2xl max-md:rounded-lg"
+              />
+            </AspectRatio>
+          </div>
+          <div className="flex flex-col gap-4 text-left max-md:w-full">
+            <h1 className="text-xl md:text-lg lg:text-xl font-bold text-zinc-100 gap-3 flex">
+              Elevate Your Videos with Custom-Crafted Background Music
+            </h1>
+            <p className="text-xs lg:text-sm font-bold text-zinc-400">
+              Innovative AI tool designed to seamlessly generate personalized
+              background music for your videos. Harness the power of AI-driven
+              composition to create the perfect musical backdrop, enhancing the
+              emotional impact and overall quality of your content. Say goodbye
+              to generic tunes and immerse your audience in a world of
+              tailor-made soundscapes that amplify the essence of your videos.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -7,15 +7,12 @@ import {
   Hash,
   Lightbulb,
   ListVideo,
-  Loader,
   MessageCircleMore,
   MusicIcon,
   ScrollText,
   Tv2,
   WholeWord,
 } from "lucide-react";
-import Image from "next/image";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const DashboardPage = () => {
   return (
@@ -123,16 +120,6 @@ const DashboardPage = () => {
             </Button>
           </Link>
         </div>
-      </div>
-      <div className="relative rounded-2xl cursor-cell">
-        <AspectRatio ratio={40 / 9}>
-          <Image
-            fill
-            alt="image"
-            src={"/coming-soon-bg.png"}
-            className="rounded-2xl"
-          />
-        </AspectRatio>
       </div>
     </div>
   );
