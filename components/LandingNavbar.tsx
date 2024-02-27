@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import { PiInstagramLogoFill, PiYoutubeLogoFill } from "react-icons/pi";
 import { Button } from "./ui/button";
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from "./ui/sheet";
 import { Menu } from "lucide-react";
@@ -46,14 +45,15 @@ const LandingNavbar = () => {
             onClick={() => scrolltoHash("faq")}
             className="text-sm cursor-pointer hover:text-red-500"
           >
-            FAQ
+            FAQs
           </div>
+          <Link href={"/pricing"}>
           <div
-            onClick={() => scrolltoHash("pricing")}
             className="text-sm cursor-pointer hover:text-red-500"
           >
             Pricing
           </div>
+          </Link>
 
           <div
             onClick={() => scrolltoHash("footer")}
@@ -103,15 +103,14 @@ const LandingNavbar = () => {
                 onClick={() => scrolltoHash("faq")}
                 className="text-sm cursor-pointer hover:text-red-500"
               >
-                FAQ
+                FAQs
               </div>
               <Separator />
-              <div
-                onClick={() => scrolltoHash("pricing")}
-                className="text-sm cursor-pointer hover:text-red-500"
-              >
+              <Link href={"/pricing"}>
+              <div className="text-sm cursor-pointer hover:text-red-500">
                 Pricing
               </div>
+              </Link>
               <Separator />
 
               <div

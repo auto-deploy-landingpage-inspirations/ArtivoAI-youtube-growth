@@ -5,7 +5,6 @@ import LandingMarquee from "@/components/LandingMarquee";
 import LandingAbout from "@/components/LandingAbout";
 import LandingTools from "@/components/LandingTools";
 import LandingFaq from "@/components/LandingFaq";
-import LandingPricing from "@/components/LandingPricing";
 import LandingLastBlock from "@/components/LandingLastBlock";
 import LandingFooter from "@/components/LandingFooter";
 
@@ -17,7 +16,6 @@ const LandingPage = () => {
       <LandingMarquee />
       <LandingAbout />
       <LandingTools />
-      <LandingPricing />
       <LandingFaq />
       <LandingLastBlock />
       <LandingFooter />
