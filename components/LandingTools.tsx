@@ -30,7 +30,7 @@ const LandingTools = () => {
               <Image
                 fill
                 alt="image"
-                src="/dashboard.png"
+                src="/script.png"
                 className="rounded-2xl max-md:rounded-lg"
               />
             </AspectRatio>
@@ -39,7 +39,7 @@ const LandingTools = () => {
             <div className="lg:text-xl md:text-lg max-md:text-xl font-extrabold bg-zinc-100 bg-clip-text text-transparent">
               Unleashing Creativity with AI-Driven Script Writing Excellence
             </div>
-            <p className=" max-lg:text-xs lg:text-sm font-bold text-zinc-400">
+            <p className=" max-lg:text-xs lg:text-sm font-light text-zinc-400">
               Experience the future of scriptwriting with artivoAI, your
               indispensable ally in crafting compelling narratives effortlessly.
               Elevate your storytelling game as our cutting-edge AI tool assists
@@ -72,7 +72,7 @@ const LandingTools = () => {
                 NEW
               </Badge>
             </h1>
-            <p className="text-xs lg:text-sm font-bold text-zinc-400">
+            <p className="text-xs lg:text-sm font-light text-zinc-400">
               Unlock 24/7 Guidance from Your AI Mentor: Elevate Your Insights
               and Support Whenever You Need it Most.
             </p>
@@ -94,7 +94,7 @@ const LandingTools = () => {
               <Image
                 fill
                 alt="image"
-                src="/dashboard.png"
+                src="/title.png"
                 className="rounded-2xl max-md:rounded-lg"
               />
             </AspectRatio>
@@ -104,7 +104,7 @@ const LandingTools = () => {
               Unleash the Power of AI for Captivating and SEO-Optimized Video
               Titles
             </div>
-            <p className=" max-lg:text-xs lg:text-sm font-bold text-zinc-400">
+            <p className=" max-lg:text-xs lg:text-sm font-light text-zinc-400">
               Our cutting-edge AI tool designed to effortlessly generate
               compelling and search-friendly titles. Save time, boost
               discoverability, and captivate your audience with titles that
@@ -120,7 +120,7 @@ const LandingTools = () => {
               <Image
                 fill
                 alt="image"
-                src="/mentor.png"
+                src="/music.png"
                 className="rounded-2xl max-md:rounded-lg"
               />
             </AspectRatio>
@@ -129,7 +129,7 @@ const LandingTools = () => {
             <h1 className="text-xl md:text-lg lg:text-xl font-bold text-zinc-100 gap-3 flex">
               Elevate Your Videos with Custom-Crafted Background Music
             </h1>
-            <p className="text-xs lg:text-sm font-bold text-zinc-400">
+            <p className="text-xs lg:text-sm font-light text-zinc-400">
               Innovative AI tool designed to seamlessly generate personalized
               background music for your videos. Harness the power of AI-driven
               composition to create the perfect musical backdrop, enhancing the

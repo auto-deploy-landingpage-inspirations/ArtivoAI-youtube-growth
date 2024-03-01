@@ -31,8 +31,8 @@ const LandingPricing = () => {
         <BadgePercent className="h-4 w-4 text-zinc-100" />
         <AlertTitle>
           The early bird gets the{" "}
-          <span className="bg-lime-500 rounded-md text-zinc-900">
-            . discount! .
+          <span className="bg-lime-500 rounded text-zinc-900">
+            discount!
           </span>
         </AlertTitle>
         <AlertDescription>
@@ -95,16 +95,16 @@ const LandingPricing = () => {
       </div>
       <div className="text-zinc-200 font-bold text-2xl px-[4vw] text-center mt-24">
         Dive into a{" "}
-        <span className="bg-yellow-500 rounded-lg text-zinc-900">
-          . community .
+        <span className="bg-yellow-500 rounded text-zinc-900">
+          community
         </span>{" "}
         of creativity —{" "}
-        <span className="bg-indigo-500 rounded-lg text-zinc-900">
-          . 500+ creators .
+        <span className="bg-indigo-500 rounded text-zinc-900">
+          500+ creators
         </span>{" "}
         are already on board with{" "}
-        <span className="bg-red-500 rounded-lg text-zinc-900">
-          . artivoAI .
+        <span className="bg-red-500 rounded text-zinc-900">
+          artivoAI
         </span>
       </div>
     </div>

@@ -5,7 +5,7 @@ const LandingFaq = () => {
   return (
     <div id="faq" className="w-full py-20">
         <div className="px-[4vw] text-5xl font-light text-zinc-100 ">
-        Answers to your <span className="underline decoration-green-500">queries</span>: Frequently Asked Questions
+        Answers to your <span className="underline font-bold decoration-green-500">queries</span>: Frequently Asked Questions
         </div>
         <div className="border-t border-zinc-800 mt-12 px-[4vw] flex items-center">
         <div className="bg-zinc-800 border-0 w-full p-10 mt-12 rounded-2xl">
