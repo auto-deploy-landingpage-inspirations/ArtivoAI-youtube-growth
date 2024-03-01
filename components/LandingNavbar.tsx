@@ -48,11 +48,14 @@ const LandingNavbar = () => {
             FAQs
           </div>
           <Link href={"/pricing"}>
-          <div
-            className="text-sm cursor-pointer hover:text-red-500"
-          >
-            Pricing
-          </div>
+            <div className="text-sm cursor-pointer hover:text-red-500">
+              Pricing
+            </div>
+          </Link>
+          <Link href={"/thumbnail-editor"}>
+            <div className="text-sm cursor-pointer hover:text-red-500">
+              Thumbnail Editor
+            </div>
           </Link>
         </div>
 
@@ -100,9 +103,15 @@ const LandingNavbar = () => {
               </div>
               <Separator />
               <Link href={"/pricing"}>
-              <div className="text-sm cursor-pointer hover:text-red-500">
-                Pricing
-              </div>
+                <div className="text-sm cursor-pointer hover:text-red-500">
+                  Pricing
+                </div>
+              </Link>
+              <Separator />
+              <Link href={"/thumbnail-editor"}>
+                <div className="text-sm cursor-pointer hover:text-red-500">
+                  Thumbnail Editor
+                </div>
               </Link>
               <Separator />
               <Link href={isSignedIn ? "/dashboard" : "/sign-in"}>
