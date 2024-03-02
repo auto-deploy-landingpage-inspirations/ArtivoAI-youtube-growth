@@ -79,7 +79,7 @@ const ThumbnailEditorPage = () => {
         <h1 className="text-zinc-300 font-light text-lg mt-6">
           Editors available for as low as{" "}
           <span className="font-bold underline decoration-lime-500">
-            &#8377;2999
+            &#8377;5999
           </span>{" "}
           per month.
         </h1>
@@ -129,7 +129,7 @@ const ThumbnailEditorPage = () => {
         <h1 className="text-zinc-300 font-light text-2xl mt-6">
           Editors available for as low as{" "}
           <span className="font-bold underline decoration-lime-500">
-            &#8377;2999
+            &#8377;5999
           </span>{" "}
           per month.
         </h1>
