@@ -3,17 +3,18 @@ import TypewriterComponent from "typewriter-effect";
 import { Button } from "./ui/button";
 import { FcGoogle } from "react-icons/fc";
 import { useAuth } from "@clerk/nextjs";
-import { Instagram, Twitter, Youtube } from "lucide-react";
+import { AspectRatio } from "@radix-ui/react-aspect-ratio";
+import Image from "next/image";
 
 const LandingHero = () => {
   const { isSignedIn } = useAuth();
   return (
     <div
       id="top"
-      className="w-full h-screen text-zinc-100 max-md:pt-28 pt-48 flex"
+      className="w-full bg-white text-zinc-950 max-md:pt-28 pt-48 flex"
     >
       <div className="w-full relative">
-        <div className="space-y-5 px-[4vw]">
+        <div className="space-y-5 text-center px-[4vw]">
           <h1 className="text-4xl md:text-4xl lg:text-5xl min-[1440px]:text-7xl font-extrabold uppercase">
             Crafted to enhance
             <br />
@@ -29,34 +30,41 @@ const LandingHero = () => {
               }}
             />
           </h1>
-          <h1 className="text-sm md:text-xl text-zinc-400 font-semibold">
+          <h1 className="text-sm md:text-xl text-zinc-800 font-semibold">
             Grab free tips and friendly advice to nurture your{" "}
             <br className="max-md:hidden" /> YouTube channel's growth with a
             smile.
           </h1>
         </div>
+        <div className="mt-16 max-md:mt-8 w-[80vw] ml-[10vw] bg-zinc-900 shadow-2xl shadow-zinc-950 border-4 border-zinc-500 rounded-2xl overflow-hidden">
+            <AspectRatio ratio={16 / 9}>
+              <Image
+                fill
+                alt="Dashboard Image"
+                src="/hero1.png"
+                className="rounded-2xl max-md:rounded-lg"
+              />
+            </AspectRatio>
+          </div>
         <div className="h-[20vh] w-[4vw] max-md:hidden bg-red-500 absolute inset-y-0 right-0 flex flex-col gap-4 justify-center items-center rounded-l-xl">
           <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
-            <div className="rotate-90 text-nowrap font-semibold text-xl max-md:text-lg">
+            <div className="rotate-90 text-zinc-100 text-nowrap font-semibold text-xl max-md:text-lg">
               Get Started
             </div>
           </Link>
         </div>
-        <div className="border-t border-zinc-800 mt-40 max-md:mt-28 flex max-md:flex-col max-md:gap-4 justify-between items-center px-[4vw] py-5 font-medium text-zinc-200">
+        <div className="border-t border-zinc-400 mt-16 mb-16 max-md:mt-8 flex max-md:flex-col max-md:gap-4 justify-between items-center px-[4vw] py-5 font-medium text-zinc-900">
           <h1>Create content using AI 10x faster.</h1>
           <h1>No credit card required.</h1>
           <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
             <Button
               variant="ghost"
-              className="md:text-base rounded-2xl font-bold"
+              className="md:text-base text-zinc-900 rounded-2xl font-bold"
             >
               <FcGoogle className="mr-3 h-7 w-7 bg-zinc-900 rounded-full" />{" "}
               Sign up with your Google account
             </Button>
           </Link>
-        </div>
-        <div className="flex justify-center items-center text-zinc-700 mt-4">
-          Scroll down
         </div>
 
         {/* <div className="space-y-5">

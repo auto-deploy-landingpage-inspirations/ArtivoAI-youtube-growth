@@ -14,7 +14,7 @@ const LandingNavbar = () => {
     element?.scrollIntoView({ behavior: "smooth", inline: "nearest" });
   };
   return (
-    <nav className="w-full fixed z-10 px-[4vw] py-3 backdrop-blur-sm flex items-center justify-between">
+    <nav className="w-[90vw] ml-[5vw] fixed z-10 px-6 py-3 mt-2 backdrop-blur bg-zinc-900/90 border border-zinc-800 rounded-2xl flex items-center justify-between">
       <div
         onClick={() => scrolltoHash("top")}
         className="flex items-center cursor-pointer"
