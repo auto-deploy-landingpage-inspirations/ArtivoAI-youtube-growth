@@ -7,7 +7,7 @@ import { useAuth } from "@clerk/nextjs";
 const SimpleNavbar = () => {
   const { isSignedIn } = useAuth();
   return (
-    <nav className="w-[90vw] ml-[5vw] mt-4 rounded-2xl fixed z-10 px-6 py-3 bg-zinc-900/90 backdrop-blur border border-zinc-800 flex items-center justify-between">
+    <nav className="w-full fixed z-10 px-[4vw] py-3 bg-zinc-900/50 backdrop-blur border-0 flex items-center justify-between">
       <Link href={"/"}>
         <div className="flex items-center cursor-pointer">
           {/* <div className="relative h-7 w-7 mr-4">

@@ -24,14 +24,14 @@ const LandingTools = () => {
         </span>
       </h1>
       <div className="border-t border-zinc-800 mt-12 pt-12 gap-4 px-[4vw] flex max-md:flex-col">
-        <div className="p-4 w-1/2 max-md:w-full flex flex-col gap-6 bg-zinc-800 border-0 rounded-2xl">
-          <div className=" max-md:w-full border border-zinc-900 rounded-2xl overflow-hidden">
+        <div className="p-4 w-1/2 max-md:w-full flex flex-col gap-6 bg-zinc-800 border border-zinc-700 rounded-2xl">
+          <div className=" max-md:w-full border border-zinc-700 rounded-xl overflow-hidden">
             <AspectRatio ratio={16 / 9}>
               <Image
                 fill
                 alt="image"
                 src="/script.png"
-                className="rounded-2xl max-md:rounded-lg"
+                className="rounded-xl max-md:rounded-lg"
               />
             </AspectRatio>
           </div>
@@ -51,14 +51,14 @@ const LandingTools = () => {
           </div>
         </div>
 
-        <div className="p-4 w-1/2 max-md:w-full flex flex-col gap-6 bg-zinc-800 border-0 rounded-2xl">
-          <div className=" max-md:w-full border border-zinc-900 rounded-2xl overflow-hidden">
+        <div className="p-4 w-1/2 max-md:w-full flex flex-col gap-6 bg-zinc-800 border border-zinc-700 rounded-2xl">
+          <div className=" max-md:w-full border border-zinc-700 rounded-xl overflow-hidden">
             <AspectRatio ratio={16 / 9}>
               <Image
                 fill
                 alt="image"
                 src="/mentor.png"
-                className="rounded-2xl max-md:rounded-lg"
+                className="rounded-xl max-md:rounded-lg"
               />
             </AspectRatio>
           </div>
@@ -88,14 +88,14 @@ const LandingTools = () => {
         </div>
       </div>
       <div className="pt-4 gap-4 px-[4vw] flex max-md:flex-col">
-        <div className="p-4 w-1/2 max-md:w-full flex flex-col gap-6 bg-zinc-800 border-0 rounded-2xl">
-          <div className=" max-md:w-full border border-zinc-900 rounded-2xl overflow-hidden">
+        <div className="p-4 w-1/2 max-md:w-full flex flex-col gap-6 bg-zinc-800 border border-zinc-700 rounded-2xl">
+          <div className=" max-md:w-full border border-zinc-700 rounded-xl overflow-hidden">
             <AspectRatio ratio={16 / 9}>
               <Image
                 fill
                 alt="image"
                 src="/title.png"
-                className="rounded-2xl max-md:rounded-lg"
+                className="rounded-xl max-md:rounded-lg"
               />
             </AspectRatio>
           </div>
@@ -114,14 +114,14 @@ const LandingTools = () => {
           </div>
         </div>
 
-        <div className="p-4 w-1/2 max-md:w-full flex flex-col gap-6 bg-zinc-800 border-0 rounded-2xl">
-          <div className=" max-md:w-full border border-zinc-900 rounded-2xl overflow-hidden">
+        <div className="p-4 w-1/2 max-md:w-full flex flex-col gap-6 bg-zinc-800 border border-zinc-700 rounded-2xl">
+          <div className=" max-md:w-full border border-zinc-700 rounded-xl overflow-hidden">
             <AspectRatio ratio={16 / 9}>
               <Image
                 fill
                 alt="image"
                 src="/music.png"
-                className="rounded-2xl max-md:rounded-lg"
+                className="rounded-xl max-md:rounded-lg"
               />
             </AspectRatio>
           </div>

@@ -11,7 +11,7 @@ const LandingHero = () => {
   return (
     <div
       id="top"
-      className="w-full bg-white text-zinc-950 max-md:pt-28 pt-48 flex"
+      className="w-full text-zinc-100 max-md:pt-28 pt-48 flex"
     >
       <div className="w-full relative">
         <div className="space-y-5 text-center px-[4vw]">
@@ -30,13 +30,13 @@ const LandingHero = () => {
               }}
             />
           </h1>
-          <h1 className="text-sm md:text-xl text-zinc-800 font-semibold">
+          <h1 className="text-sm md:text-xl text-zinc-400 font-semibold">
             Grab free tips and friendly advice to nurture your{" "}
             <br className="max-md:hidden" /> YouTube channel's growth with a
             smile.
           </h1>
         </div>
-        <div className="mt-16 max-md:mt-8 w-[80vw] ml-[10vw] bg-zinc-900 shadow-2xl shadow-zinc-950 border-4 border-zinc-500 rounded-2xl overflow-hidden">
+        <div className="mt-16 max-md:mt-8 w-[80vw] max-md:w-[90vw] ml-[10vw] max-md:ml-[5vw] bg-zinc-900 border-2 border-zinc-700 rounded-2xl overflow-hidden">
             <AspectRatio ratio={16 / 9}>
               <Image
                 fill
@@ -53,13 +53,13 @@ const LandingHero = () => {
             </div>
           </Link>
         </div>
-        <div className="border-t border-zinc-400 mt-16 mb-16 max-md:mt-8 flex max-md:flex-col max-md:gap-4 justify-between items-center px-[4vw] py-5 font-medium text-zinc-900">
+        <div className="border-t border-zinc-800 mt-16 mb-16 max-md:mt-8 flex max-md:flex-col max-md:gap-4 justify-between items-center px-[4vw] py-5 font-medium text-zinc-300">
           <h1>Create content using AI 10x faster.</h1>
           <h1>No credit card required.</h1>
           <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
             <Button
               variant="ghost"
-              className="md:text-base text-zinc-900 rounded-2xl font-bold"
+              className="md:text-base text-zinc-300 rounded-2xl font-bold"
             >
               <FcGoogle className="mr-3 h-7 w-7 bg-zinc-900 rounded-full" />{" "}
               Sign up with your Google account

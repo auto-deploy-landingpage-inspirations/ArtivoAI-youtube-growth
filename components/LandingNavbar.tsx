@@ -14,7 +14,7 @@ const LandingNavbar = () => {
     element?.scrollIntoView({ behavior: "smooth", inline: "nearest" });
   };
   return (
-    <nav className="w-[90vw] ml-[5vw] fixed z-10 px-6 py-3 mt-2 backdrop-blur bg-zinc-900/90 border border-zinc-800 rounded-2xl flex items-center justify-between">
+    <nav className="w-full fixed z-10 px-[4vw] py-3 backdrop-blur bg-zinc-900/50 border-0 flex items-center justify-between">
       <div
         onClick={() => scrolltoHash("top")}
         className="flex items-center cursor-pointer"
@@ -29,12 +29,12 @@ const LandingNavbar = () => {
 
       <div className="flex items-center gap-4">
         <div className="flex gap-8 max-md:hidden text-zinc-100 font-semibold transition-all">
-          <div
+          {/* <div
             onClick={() => scrolltoHash("about")}
             className="text-sm cursor-pointer hover:text-red-500"
           >
             About
-          </div>
+          </div> */}
           <div
             onClick={() => scrolltoHash("tools")}
             className="text-sm cursor-pointer hover:text-red-500"
@@ -79,15 +79,15 @@ const LandingNavbar = () => {
           <SheetTrigger className="md:hidden text-zinc-200">
             <Menu />
           </SheetTrigger>
-          <SheetContent className=" bg-zinc-900 border-l border-red-500 rounded-l-3xl w-auto pt-12">
+          <SheetContent className="h-[50vh] bg-zinc-900 border-l border-y border-zinc-500 rounded-l-2xl w-auto pt-12">
             <SheetClose className="flex flex-col items-center text-zinc-100 font-semibold gap-4">
-              <div
+              {/* <div
                 onClick={() => scrolltoHash("about")}
                 className="text-sm cursor-pointer hover:text-red-500"
               >
                 About
               </div>
-              <Separator />
+              <Separator /> */}
               <div
                 onClick={() => scrolltoHash("tools")}
                 className="text-sm cursor-pointer hover:text-red-500"
