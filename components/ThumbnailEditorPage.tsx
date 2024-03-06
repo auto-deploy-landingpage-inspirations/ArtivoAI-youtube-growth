@@ -4,22 +4,22 @@ import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 import { BadgeIndianRupee, FileBadge, LineChart, Tv2 } from "lucide-react";
 
 const Skeleton1 = () => (
-  <div className="flex justify-center items-center w-full h-full min-h-[6rem] rounded-xl border border-lime-900 bg-zinc-900">
+  <div className="flex justify-center items-center w-full h-full min-h-[6rem] rounded-xl border-0 bg-zinc-800">
     <LineChart className="h-12 w-12 text-lime-500" />
   </div>
 );
 const Skeleton2 = () => (
-  <div className="flex justify-center items-center w-full h-full min-h-[6rem] rounded-xl border border-sky-900 bg-zinc-900">
+  <div className="flex justify-center items-center w-full h-full min-h-[6rem] rounded-xl border-0 bg-zinc-800">
     <FileBadge className="h-12 w-12 text-sky-500" />
   </div>
 );
 const Skeleton3 = () => (
-  <div className="flex justify-center items-center w-full h-full min-h-[6rem] rounded-xl border border-yellow-900 bg-zinc-900">
+  <div className="flex justify-center items-center w-full h-full min-h-[6rem] rounded-xl border-0 bg-zinc-800">
     <Tv2 className="h-12 w-12 text-yellow-500" />
   </div>
 );
 const Skeleton4 = () => (
-  <div className="flex justify-center items-center w-full h-full min-h-[6rem] rounded-xl border border-orange-900 bg-zinc-900">
+  <div className="flex justify-center items-center w-full h-full min-h-[6rem] rounded-xl border-0 bg-zinc-800">
     <BadgeIndianRupee className="h-12 w-12 text-orange-500" />
   </div>
 );
@@ -56,9 +56,9 @@ const items = [
 
 const ThumbnailEditorPage = () => {
   return (
-    <div className="w-full">
+    <div className="w-full bg-zinc-50">
       <div className="px-[4vw] pt-40">
-        <h1 className="text-zinc-100 text-5xl">
+        <h1 className="text-zinc-900 text-5xl">
           Supercharge your{" "}
           <span className="underline decoration-red-500 font-bold">
             YouTube visibility
@@ -68,7 +68,7 @@ const ThumbnailEditorPage = () => {
             Thumbnail Editor.
           </span>
         </h1>
-        <h1 className="text-zinc-300 font-light text-2xl mt-6">
+        <h1 className="text-zinc-800 font-light text-2xl mt-6">
           The road to YouTube fame is more complex and demanding than it seems.
         </h1>
         <Link href={"/"}>
@@ -76,7 +76,7 @@ const ThumbnailEditorPage = () => {
             Secure your very own Personal Editor today!
           </Button>
         </Link>
-        <h1 className="text-zinc-300 font-light text-lg mt-6">
+        <h1 className="text-zinc-800 font-light text-lg mt-6">
           Editors available for as low as{" "}
           <span className="font-bold underline decoration-lime-500">
             &#8377;5999
@@ -84,7 +84,7 @@ const ThumbnailEditorPage = () => {
           per month.
         </h1>
       </div>
-      <div className="mt-12 pt-12 pb-12 border-y border-zinc-800">
+      <div className="mt-12 pt-12 pb-12 border-y border-zinc-200">
         <BentoGrid className="px-[4vw] md:auto-rows-[20rem]">
           {items.map((item, i) => (
             <BentoGridItem
@@ -98,26 +98,26 @@ const ThumbnailEditorPage = () => {
         </BentoGrid>
       </div>
       <div className="px-[4vw] mt-24 mb-24">
-        <h1 className="text-zinc-200 font-bold text-3xl">How it Works :</h1>
-        <h1 className="text-zinc-200 font-light text-xl mt-8">
+        <h1 className="text-zinc-900 font-bold text-3xl">How it Works :</h1>
+        <h1 className="text-zinc-900 font-light text-xl mt-8">
           1. Start by reaching out to us for a{" "}
-          <span className="font-bold bg-lime-500 text-zinc-900 rounded">
+          <span className="font-bold p-1 bg-lime-500 text-zinc-900 rounded">
             personalized consultation.
           </span>{" "}
           Share your vision, style preferences, and branding elements with our
           team.
         </h1>
-        <h1 className="text-zinc-200 font-light text-xl mt-4">
+        <h1 className="text-zinc-900 font-light text-xl mt-4">
           2. Our{" "}
-          <span className="font-bold bg-indigo-500 text-zinc-900 rounded">
+          <span className="font-bold p-1 bg-indigo-500 text-zinc-900 rounded">
             Thumbnail Editors
           </span>{" "}
-          will get to work, creating visually <span className="font-bold bg-sky-500 text-zinc-900 rounded">stunning thumbnails</span> that align
+          will get to work, creating visually <span className="font-bold p-1 bg-sky-500 text-zinc-900 rounded">stunning thumbnails</span> that align
           with your content and engage your audience.
         </h1>
-        <h1 className="text-zinc-200 font-light text-xl mt-4">
+        <h1 className="text-zinc-900 font-light text-xl mt-4">
           3. Once approved, your finalized thumbnails will be delivered
-          promptly, ready to <span className="font-bold bg-yellow-500 text-zinc-900 rounded">boost your video's</span> click-through rate.
+          promptly, ready to <span className="font-bold p-1 bg-yellow-500 text-zinc-900 rounded">boost your video's</span> click-through rate.
         </h1>
       </div>
       <div className="text-center py-24 px-[4vw]">
@@ -126,7 +126,7 @@ const ThumbnailEditorPage = () => {
             Secure your very own Personal Editor today!
           </Button>
         </Link>
-        <h1 className="text-zinc-300 font-light text-2xl mt-6">
+        <h1 className="text-zinc-800 font-light text-2xl mt-6">
           Editors available for as low as{" "}
           <span className="font-bold underline decoration-lime-500">
             &#8377;5999
