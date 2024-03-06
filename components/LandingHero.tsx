@@ -36,7 +36,7 @@ const LandingHero = () => {
             smile.
           </h1>
         </div>
-        <div className="mt-16 max-md:mt-8 w-[90vw] ml-[5vw] max-md:w-[130vw] border border-zinc-400 bg-zinc-900 rounded-3xl overflow-hidden">
+        <div className="mt-16 max-md:mt-8 w-[90vw] ml-[5vw] max-md:w-[130vw] rounded-3xl overflow-hidden">
             <AspectRatio ratio={16 / 9}>
               <Image
                 fill

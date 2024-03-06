@@ -27,7 +27,7 @@ const LandingPricing = () => {
       <div className="px-[4vw] text-center text-5xl font-bold text-zinc-900 underline decoration-red-500">
         Pricing
       </div>
-      <Alert className="w-[30vw] max-md:w-[80vw] ml-[35vw] max-md:ml-[10vw] bg-zinc-200 border border-zinc-300 text-zinc-900 mt-12">
+      <Alert className="w-[30vw] max-md:w-[90vw] ml-[35vw] max-md:ml-[5vw] bg-zinc-200 border border-zinc-300 text-zinc-900 mt-12">
         <BadgePercent className="h-4 w-4 text-zinc-100" />
         <AlertTitle>
           The early bird gets the{" "}

@@ -10,8 +10,8 @@ const PrivacyPage = () => {
   return (
     <div>
       <SimpleNavbar />
-      <div className="px-[4vw] space-y-12 py-32">
-        <h1 className="text-4xl max-md:text-3xl text-zinc-200 underline decoration-green-500 font-bold text-center">
+      <div className="px-[4vw] bg-zinc-50 space-y-12 py-32">
+        <h1 className="text-4xl max-md:text-3xl text-zinc-900 underline decoration-green-500 font-bold text-center">
           Privacy Policy
         </h1>
         <div className="flex flex-col gap-12 text-justify bg-zinc-800  p-20 max-md:p-6 rounded-2xl text-zinc-300">

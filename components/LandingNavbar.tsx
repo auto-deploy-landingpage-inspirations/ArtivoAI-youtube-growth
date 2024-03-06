@@ -26,7 +26,7 @@ const LandingNavbar = () => {
           artivo<span className="font-bold text-red-500">AI.</span>
         </h1>
       </div>
-      <div className="flex gap-8 max-lg:hidden text-zinc-900 font-semibold transition-all">
+      <div className="flex gap-4 max-lg:hidden text-zinc-900 font-semibold transition-all">
         <div
             onClick={() => scrolltoHash("about")}
             className="text-sm cursor-pointer rounded-xl p-2 hover:bg-zinc-200"
