@@ -14,7 +14,7 @@ const LandingNavbar = () => {
     element?.scrollIntoView({ behavior: "smooth", inline: "nearest" });
   };
   return (
-    <nav className="w-full fixed z-10 px-[4vw] py-3 backdrop-blur bg-zinc-900/50 border-0 flex items-center justify-between">
+    <nav className="w-full fixed z-10 px-[4vw] py-3 bg-zinc-50 border-0 shadow-sm flex items-center justify-between">
       <div
         onClick={() => scrolltoHash("top")}
         className="flex items-center cursor-pointer"
@@ -22,106 +22,107 @@ const LandingNavbar = () => {
         {/* <div className="relative h-7 w-7 mr-4">
           <Image fill alt="Logo" src="/logo.png" />
         </div> */}
-        <h1 className={cn("text-2xl font-bold text-white")}>
+        <h1 className={cn("text-2xl font-bold text-zinc-950")}>
           artivo<span className="font-bold text-red-500">AI.</span>
         </h1>
       </div>
-
-      <div className="flex items-center gap-4">
-        <div className="flex gap-8 max-md:hidden text-zinc-100 font-semibold transition-all">
-          {/* <div
+      <div className="flex gap-8 max-md:hidden text-zinc-900 font-semibold transition-all">
+        <div
             onClick={() => scrolltoHash("about")}
-            className="text-sm cursor-pointer hover:text-red-500"
+            className="text-sm cursor-pointer rounded-xl p-2 hover:bg-zinc-200"
           >
             About
-          </div> */}
-          <div
-            onClick={() => scrolltoHash("tools")}
-            className="text-sm cursor-pointer hover:text-red-500"
-          >
-            AI Tools
           </div>
-          <div
-            onClick={() => scrolltoHash("faq")}
-            className="text-sm cursor-pointer hover:text-red-500"
-          >
-            FAQs
-          </div>
-          <Link href={"/pricing"}>
-            <div className="text-sm cursor-pointer hover:text-red-500">
-              Pricing
-            </div>
-          </Link>
-          <Link href={"/thumbnail-editor"}>
-            <div className="text-sm cursor-pointer hover:text-red-500">
-              Thumbnail Editor
-            </div>
-          </Link>
+        <div
+          onClick={() => scrolltoHash("tools")}
+          className="text-sm cursor-pointer rounded-xl p-2 hover:bg-zinc-200"
+        >
+          AI Tools
         </div>
-
+        <div
+          onClick={() => scrolltoHash("faq")}
+          className="text-sm cursor-pointer rounded-xl p-2 hover:bg-zinc-200"
+        >
+          FAQs
+        </div>
+        <Link href={"/pricing"}>
+          <div className="text-sm cursor-pointer rounded-xl p-2 hover:bg-zinc-200">
+            Pricing
+          </div>
+        </Link>
+        <Link href={"/thumbnail-editor"}>
+          <div className="text-sm cursor-pointer rounded-xl p-2 hover:bg-zinc-200">
+            Thumbnail Editor
+          </div>
+        </Link>
+      </div>
+      <div className="flex items-center gap-4">
         <Link href={isSignedIn ? "/dashboard" : "/sign-in"}>
           <Button
             variant={"ghost"}
-            className="text-sm font-medium border-zinc-800 rounded-2xl max-md:hidden ml-12"
+            className="text-sm font-medium text-zinc-900 border-0 bg-zinc-200 rounded-xl max-md:hidden"
           >
             Dashboard
           </Button>
         </Link>
-        {/* <Link href={isSignedIn ? "/dashboard" : "/sign-in"}>
+        <Link href={isSignedIn ? "/dashboard" : "/sign-in"}>
           <Button
             variant="ghost"
-            className="text-sm w-24 rounded-2xl max-md:hidden"
+            className="text-sm rounded-xl text-zinc-100 border-0 bg-red-500 max-md:hidden"
           >
             LOGIN
           </Button>
-        </Link> */}
+        </Link>
         <Sheet>
-          <SheetTrigger className="md:hidden text-zinc-200">
+          <SheetTrigger className="md:hidden text-zinc-900">
             <Menu />
           </SheetTrigger>
-          <SheetContent className="h-[50vh] bg-zinc-900 border-l border-y border-zinc-500 rounded-l-2xl w-auto pt-12">
-            <SheetClose className="flex flex-col items-center text-zinc-100 font-semibold gap-4">
-              {/* <div
+          <SheetContent className="h-[75vh] bg-zinc-100 border-l border-y border-zinc-300 rounded-l-2xl w-auto pt-12">
+            <SheetClose className="flex flex-col items-center text-zinc-900 font-semibold gap-4">
+              <div
                 onClick={() => scrolltoHash("about")}
-                className="text-sm cursor-pointer hover:text-red-500"
+                className="text-sm w-full cursor-pointer rounded-xl p-3 bg-zinc-200"
               >
                 About
               </div>
-              <Separator /> */}
               <div
                 onClick={() => scrolltoHash("tools")}
-                className="text-sm cursor-pointer hover:text-red-500"
+                className="text-sm w-full cursor-pointer rounded-xl p-3 bg-zinc-200"
               >
                 AI Tools
               </div>
-              <Separator />
               <div
                 onClick={() => scrolltoHash("faq")}
-                className="text-sm cursor-pointer hover:text-red-500"
+                className="text-sm w-full cursor-pointer rounded-xl p-3 bg-zinc-200"
               >
                 FAQs
               </div>
-              <Separator />
-              <Link href={"/pricing"}>
-                <div className="text-sm cursor-pointer hover:text-red-500">
+              <Link href={"/pricing"} className="w-full">
+                <div className="text-sm cursor-pointer rounded-xl p-3 bg-zinc-200">
                   Pricing
                 </div>
               </Link>
-              <Separator />
-              <Link href={"/thumbnail-editor"}>
-                <div className="text-sm cursor-pointer hover:text-red-500">
+              <Link href={"/thumbnail-editor"} className="w-full">
+                <div className="text-sm cursor-pointer rounded-xl p-3 bg-zinc-200">
                   Thumbnail Editor
                 </div>
               </Link>
-              <Separator />
-              <Link href={isSignedIn ? "/dashboard" : "/sign-in"}>
+              <Link href={isSignedIn ? "/dashboard" : "/sign-in"} className="w-full">
                 <Button
                   variant={"ghost"}
-                  className="text-sm font-medium border-zinc-800 rounded-2xl"
+                  className="text-sm w-full text-zinc-900 border-0 bg-zinc-200 rounded-xl"
                 >
                   Dashboard
                 </Button>
               </Link>
+              <Link href={isSignedIn ? "/dashboard" : "/sign-in"} className="w-full">
+          <Button
+            variant="ghost"
+            className="text-sm w-full rounded-xl text-zinc-100 border-0 bg-red-500"
+          >
+            LOGIN
+          </Button>
+        </Link>
             </SheetClose>
           </SheetContent>
         </Sheet>

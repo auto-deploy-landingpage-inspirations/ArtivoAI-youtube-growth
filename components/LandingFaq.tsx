@@ -3,13 +3,13 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./
 
 const LandingFaq = () => {
   return (
-    <div id="faq" className="w-full py-20">
-        <div className="px-[4vw] text-5xl font-light text-zinc-100 ">
+    <div id="faq" className="w-full bg-zinc-50 py-20">
+        <div className="px-[4vw] text-5xl font-light text-zinc-900 ">
         Answers to your <span className="underline font-bold decoration-green-500">queries</span>: Frequently Asked Questions
         </div>
-        <div className="border-t border-zinc-800 mt-12 px-[4vw] flex items-center">
-        <div className="bg-zinc-800 border-0 w-full p-10 mt-12 rounded-2xl">
-          <Accordion type="single" collapsible className="text-zinc-100">
+        <div className="border-t border-zinc-200 mt-12 px-[4vw] flex items-center">
+        <div className="bg-zinc-200 border border-zinc-300 w-full p-10 max-md:p-8 mt-12 rounded-2xl">
+          <Accordion type="single" collapsible className="text-zinc-900">
             <AccordionItem value="item-1">
               <AccordionTrigger>
                 What is ArtivoAI and how can it benefit YouTubers?

@@ -14,7 +14,7 @@ const LandingPage = () => {
       <LandingNavbar />
       <LandingHero />
       <LandingMarquee />
-      {/* <LandingAbout /> */}
+      <LandingAbout />
       <LandingTools />
       <LandingFaq />
       <LandingLastBlock />

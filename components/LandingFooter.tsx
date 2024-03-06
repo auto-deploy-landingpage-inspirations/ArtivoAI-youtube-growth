@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const LandingFooter = () => {
   return (
-    <div id="footer" className="w-full bg-zinc-800 rounded-t-2xl">
+    <div id="footer" className="w-full bg-zinc-800">
       <div className="px-[4vw] w-full flex max-md:flex-col max-md:text-center gap-8 justify-between py-12">
         <div className="text-zinc-400 font-light md:text-justify md:w-1/2 gap-4 flex flex-col">
         <h1 className="text-3xl text-zinc-200 font-extrabold">artivo<span className="text-red-500">AI.</span></h1>
