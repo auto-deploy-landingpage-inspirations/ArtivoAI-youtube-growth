@@ -42,6 +42,7 @@ const LandingHero = () => {
                 fill
                 alt="Dashboard Image"
                 src="/hero.png"
+                className="rounded-3xl"
               />
             </AspectRatio>
           </div>
@@ -52,7 +53,7 @@ const LandingHero = () => {
             </div>
           </Link>
         </div>
-        <div className="border-t border-zinc-200 mt-16 mb-16 max-md:mt-8 flex max-md:flex-col max-md:gap-4 justify-between items-center px-[4vw] py-5 font-medium text-zinc-700">
+        <div className="border-t border-zinc-200 mt-16 mb-16 max-lg:mt-8 flex max-lg:flex-col max-lg:gap-4 justify-between items-center px-[4vw] py-5 font-medium text-zinc-700">
           <h1>Create content using AI 10x faster.</h1>
           <h1>No credit card required.</h1>
           <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>

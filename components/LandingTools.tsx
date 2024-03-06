@@ -25,12 +25,12 @@ const LandingTools = () => {
       </h1>
       <div className="border-t border-zinc-200 mt-12 pt-12 gap-4 px-[4vw] flex max-md:flex-col">
         <div className="p-4 w-1/2 max-md:w-full flex flex-col gap-6 bg-zinc-200 border border-zinc-300 rounded-2xl">
-          <div className=" max-md:w-full border border-zinc-700 rounded-xl overflow-hidden">
+          <div className=" max-md:w-full rounded-xl overflow-hidden">
             <AspectRatio ratio={16 / 9}>
               <Image
                 fill
                 alt="image"
-                src="/script.png"
+                src="/script-mockup.png"
                 className="rounded-xl max-md:rounded-lg"
               />
             </AspectRatio>
@@ -52,12 +52,12 @@ const LandingTools = () => {
         </div>
 
         <div className="p-4 w-1/2 max-md:w-full flex flex-col gap-6 bg-zinc-200 border border-zinc-300 rounded-2xl">
-          <div className=" max-md:w-full border border-zinc-700 rounded-xl overflow-hidden">
+          <div className=" max-md:w-full rounded-xl overflow-hidden">
             <AspectRatio ratio={16 / 9}>
               <Image
                 fill
                 alt="image"
-                src="/mentor.png"
+                src="/mentor-mockup.png"
                 className="rounded-xl max-md:rounded-lg"
               />
             </AspectRatio>
@@ -89,12 +89,12 @@ const LandingTools = () => {
       </div>
       <div className="pt-4 gap-4 px-[4vw] flex max-md:flex-col">
         <div className="p-4 w-1/2 max-md:w-full flex flex-col gap-6 bg-zinc-200 border border-zinc-300 rounded-2xl">
-          <div className=" max-md:w-full border border-zinc-700 rounded-xl overflow-hidden">
+          <div className=" max-md:w-full rounded-xl overflow-hidden">
             <AspectRatio ratio={16 / 9}>
               <Image
                 fill
                 alt="image"
-                src="/title.png"
+                src="/title-mockup.png"
                 className="rounded-xl max-md:rounded-lg"
               />
             </AspectRatio>
@@ -115,12 +115,12 @@ const LandingTools = () => {
         </div>
 
         <div className="p-4 w-1/2 max-md:w-full flex flex-col gap-6 bg-zinc-200 border border-zinc-300 rounded-2xl">
-          <div className=" max-md:w-full border border-zinc-700 rounded-xl overflow-hidden">
+          <div className=" max-md:w-full rounded-xl overflow-hidden">
             <AspectRatio ratio={16 / 9}>
               <Image
                 fill
                 alt="image"
-                src="/music.png"
+                src="/music-mockup.png"
                 className="rounded-xl max-md:rounded-lg"
               />
             </AspectRatio>

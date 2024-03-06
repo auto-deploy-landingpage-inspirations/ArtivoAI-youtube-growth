@@ -26,7 +26,7 @@ const LandingNavbar = () => {
           artivo<span className="font-bold text-red-500">AI.</span>
         </h1>
       </div>
-      <div className="flex gap-8 max-md:hidden text-zinc-900 font-semibold transition-all">
+      <div className="flex gap-8 max-lg:hidden text-zinc-900 font-semibold transition-all">
         <div
             onClick={() => scrolltoHash("about")}
             className="text-sm cursor-pointer rounded-xl p-2 hover:bg-zinc-200"
@@ -60,7 +60,7 @@ const LandingNavbar = () => {
         <Link href={isSignedIn ? "/dashboard" : "/sign-in"}>
           <Button
             variant={"ghost"}
-            className="text-sm font-medium text-zinc-900 border-0 bg-zinc-200 rounded-xl max-md:hidden"
+            className="text-sm font-medium text-zinc-900 border-0 bg-zinc-200 rounded-xl max-lg:hidden"
           >
             Dashboard
           </Button>
@@ -68,13 +68,13 @@ const LandingNavbar = () => {
         <Link href={isSignedIn ? "/dashboard" : "/sign-in"}>
           <Button
             variant="ghost"
-            className="text-sm rounded-xl text-zinc-100 border-0 bg-red-500 max-md:hidden"
+            className="text-sm rounded-xl text-zinc-100 border-0 bg-red-500 max-lg:hidden"
           >
             LOGIN
           </Button>
         </Link>
         <Sheet>
-          <SheetTrigger className="md:hidden text-zinc-900">
+          <SheetTrigger className="lg:hidden text-zinc-900">
             <Menu />
           </SheetTrigger>
           <SheetContent className="h-[75vh] bg-zinc-100 border-l border-y border-zinc-300 rounded-l-2xl w-auto pt-12">
