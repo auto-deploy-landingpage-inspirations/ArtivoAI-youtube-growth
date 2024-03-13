@@ -16,10 +16,18 @@ const LandingFooter = () => {
         </div>
         <div className="text-zinc-400 tracking-tighter font-light text-sm flex flex-col gap-4">
           <h1 className="text-2xl text-zinc-200 font-bold">Connect With Us</h1>
+          <Link href={"mailto:artivo.ai@gmail.com"}>
           <h1>artivo.ai@gmail.com</h1>
+          </Link>
+          <Link href={"https://www.instagram.com/artivoai/"} target="_blank">
           <h1>Instagram</h1>
+          </Link>
+          <Link href={"https://twitter.com/artivoAI"} target="_blank">
           <h1>Twitter</h1>
+          </Link>
+          <Link href={"https://www.youtube.com/@ArtivoAI"} target="_blank">
           <h1>Youtube</h1>
+          </Link>
         </div>
         <div className="text-zinc-400 tracking-tighter font-light text-sm flex flex-col gap-4">
           <h1 className="text-2xl text-zinc-200 font-bold">Other</h1>
